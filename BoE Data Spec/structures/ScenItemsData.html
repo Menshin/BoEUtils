@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Scenario Item Data</h3>
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Info-Header" data-bs-toggle="list" href="#ScenItems" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Item Record</code></td>
+						<td class="nameCol"><code>scen_items[400]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Town-Infos" data-bs-toggle="list" href="#ScenMonstersNames" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x006720</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>monst_names[256][20]</code></td>
+
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-a" data-bs-toggle="list" href="#ScenTerrainsNames" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x007B20</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>ter_names[256][30]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			</div>
+			Size : 0x9920 bytes
+		  </div>
+		  
+<!-- Tab panel content -->	 
+ 
+		  <div class="col-8">
+			<h3 class="text-center">&nbsp</h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded p-2 " id="ScenItems" role="tabpanel">
+				<p class="description-head">
+					Items templates for the current scenario.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="ItemRecordType.html">Item Record</a>
+				</p>
+				
+			</div>
+			
+			<div class="tab-pane fade border border-secondary rounded p-2" id="ScenTownInfos" role="tabpanel">
+				<p class="description-head">
+					Contains informations of the size and visibility of the scenario towns.
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					Initialization values for various scenario variables (some needed to properly parse the scenario file).
+					<ul>
+						<li><code>town_size[200]</code> : size of each town in the scenario (even for unused towns).</li>
+						<li><code>town_hidden[200]</code> : visibility of each town in the scenario (even for unused towns).</li>
+					</ul>
+				</p>
+		    </div>
+		  
+		</div>
+	  </div>
+	</div>
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script> 
+	<script src="../js/stickontop.js"></script> 
+</script> 
+  </body>
+</html>

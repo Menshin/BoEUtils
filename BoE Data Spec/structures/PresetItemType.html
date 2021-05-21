@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Preset Item</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemLoc" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>item_loc</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemItemCode" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>item_code</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemAbility" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000004</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>ability</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemCharges" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000006</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>charges</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemAlwaysThere" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000007</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>always_there</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemProperty" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000008</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>property</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetItemContained" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000009</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>contained</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0xA bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemLoc" role="tabpanel">
+				<p class="description-head">
+					The location of the preset item in the loaded/saved town.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemItemCode" role="tabpanel">
+				<p class="description-head">
+					The index of the preset item template in the <code>scen_item_list.scen_items[]</code> array.</b>.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any index between <code>0</code> and <code>399</code> or <code>-1</code> if no item in this slot.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemAbility" role="tabpanel">
+				<p class="description-head">
+					The ability of the preset item, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<ul>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#WeaponAbilities">Weapon Abilities</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#GeneralAbilities">General Abilities</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#NonSpellUsable">Non-spell Usable</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#SpellUsable">Spell Usable</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#Reagents">Reagents</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#MissileAbilities">Missile Abilities</a></li>
+					</ul>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemCharges" role="tabpanel">
+				<p class="description-head">
+					How many charges the item have, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>2500</code> inclusive or <code>-1</code> to use the item template default charges.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemAlwaysThere" role="tabpanel">
+				<p class="description-head">
+					Whether the item is always there each time entering town.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean value (stored as a unsigned char).
+				</p>
+			  </div>
+			 
+			 <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemProperty" role="tabpanel">
+				<p class="description-head">
+					Whether the item belongs to someone and taking it would be stealing.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean value (stored as a unsigned char).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetItemContained" role="tabpanel">
+				<p class="description-head">
+					Whether the item is inside a container (so it isn't drawn over the container or grabbed without opening the container).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean value (stored as a unsigned char).
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

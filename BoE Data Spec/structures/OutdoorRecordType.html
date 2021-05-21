@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Outdoor Record</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorTerrain" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>terrain[48][48]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorSpecialLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000900</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>special_locs[18]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorSpecialId" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000924</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>special_id[18]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorExitLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000936</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>exit_locs[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorExitDests" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000946</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>exit_dests[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorSignLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00094E</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>sign_locs[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWandering" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00095E</td>
+						<td class="typeCol"><code>out_wandering_type</code></td>
+						<td class="nameCol"><code>wandering[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorSpecialEnc" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0009B6</td>
+						<td class="typeCol"><code>out_wandering_type</code></td>
+						<td class="nameCol"><code>special_enc[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderingLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000A0E</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>wandering_locs[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorInfoRect" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000A16</td>
+						<td class="typeCol"><code>RECT</code></td>
+						<td class="nameCol"><code>info_rect[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorStrLens" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000A56</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>strlens[180] (see description)</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorSpecials" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000B0A</td>
+						<td class="typeCol"><code>special_node_type</code></td>
+						<td class="nameCol"><code>specials[60]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x1032 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorTerrain" role="tabpanel">
+				<p class="description-head">
+					Array of indexes for <code>scenario.ter_types</code>, describing the outdoor 48x48 chunk terrain.
+				</p>
+				<p> 
+					<h5>Value</h5>
+					Any valid index (between <code>0</code> and <code>255</code>, inclusive).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorSpecialLocs" role="tabpanel">
+				<p class="description-head">
+					Locations of the current outdoor chunk specials encounters.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Any valid location (aka two <code>char</code> between <code>0</code> and <code>47</code>, inclusive).<br>
+					<i>Special case</i> : <code>special_locs[i].x</code> is set to <code>100</code>, if there's no special to place.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorSpecialId" role="tabpanel">
+				<p class="description-head">
+					The indexes of the outdoor chunk specials encounters in the <code>specials[]</code> struct array.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>59</code>, inclusive or <code>-1</code> if there's no special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorExitLocs" role="tabpanel">
+				<p class="description-head">
+					The location of town entrances in the current outdoor chunk.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Any valid location (aka two <code>char</code> between <code>0</code> and <code>47</code>, inclusive).<br>
+					<i>Special case</i> : <code>exit_locs[i].x</code> is set to <code>100</code>, if there's no town entrance to place.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorExitDests" role="tabpanel">
+				<p class="description-head">
+					The town to load/enter when reaching location <code>exit_locs[i]</code>.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any valid town number (between <code>0</code> and <code>scenario.num_towns - 1</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorSignLocs" role="tabpanel">
+				<p class="description-head">
+					The location of any placed signs in the current outdoor chunk.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Any valid location (aka two <code>char</code> between <code>0</code> and <code>47</code>, inclusive).<br>
+					<i>Special case</i> : <code>sign_locs[i].x</code> is set to <code>100</code>, if there's no town entrance to place. <b><= Checked but never set apparently</b>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWandering" role="tabpanel">
+				<p class="description-head">
+					Data for the wandering encounters in the outdoor chunk.
+				</p>
+				<p>
+				    <h5>Custom type used</h5>
+					<a class="nav-link" href="OutdoorWandering.html">Outdoor Wandering Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorSpecialEnc" role="tabpanel">
+				<p class="description-head">
+					Data for the special encounters in the outdoor chunk (used with <code>place_special_outdoor_encounter</code> nodes).
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="OutdoorWandering.html">Outdoor Wandering Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderingLocs" role="tabpanel">
+				<p class="description-head">
+					Locations where the wandering encounters spawn from (randomly chosen between the set positions for each encounter).
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Any valid location (aka two <code>char</code> between <code>0</code> and <code>47</code>, inclusive).<br>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorInfoRect" role="tabpanel">
+				<p class="description-head">
+					Rectangles use for room descriptions.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="RECT.html">RECT</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorStrLens" role="tabpanel">
+				<p class="description-head">
+					The length of outdoor strings (Outdoor text in the editor).
+				</p>
+				<p>
+					<h5>Value</h5>
+					The first 120 values are the first 120 strings length (ending with a length 0x25 for the 109th string which is hardcode added at the end of the outdoor strings as "From here on, reserved for future use").<br>
+					In reality, only 108 outdoor strings can be set.<br><br>
+					The last 60 values are not used (set to 0).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorSpecials" role="tabpanel">
+				<p class="description-head">
+					The outdoor chunk specials.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="SpecialNodeType.html">Special Node Type</a>
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

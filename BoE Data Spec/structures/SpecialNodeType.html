@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Special Node</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#SpecialType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#SpecialSd" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000002</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>sd1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000004</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>sd2</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#SpecialMessageData" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000006</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>pic</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000008</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>m1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00000A</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>m2</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#SpecialExtraFields" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x00000C</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>ex1a</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00000E</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>ex1b</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000010</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>ex2a</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000012</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>ex2b</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#SpecialJumpTo" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000014</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>jumpto</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x16 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="SpecialType" role="tabpanel">
+				<p class="description-head">
+					The type of the special node.
+				</p>
+				<p>
+					<h5>Values</h5>
+					<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Value</code></th>
+								  <th scope="col" class="fs-5"><code>Type</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0 -> 27</code></td>
+									<td><a href="Specs/GeneralSpecs.html">General Specs</a></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">50 -> 63</code></td>
+									<td><a href="Specs/OneShotsSpecs.html">One Shots Specs</a></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">80 -> 106</code></td>
+									<td><a href="Specs/AffectSpecs.html">Affect PC </a></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">130 -> 155</code></td>
+									<td><a href="Specs/IfThenSpecs.html">If-Then specs</a></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">170 -> 195</code></td>
+									<td><a href="Specs/TownSpecs.html">Town specs</a></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">200 -> 218</code></td>
+									<td><a href="Specs/RectSpecs.html">Rect specs </a><br>(inside Town specs in editor)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">225 -> 229</code></td>
+									<td><a href="Specs/OutdoorSpecs.html">Outdoor specs</a></td>
+								</tr>
+							</tbody>
+						</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="SpecialSd" role="tabpanel">
+				<p class="description-head">
+					Indexes to the Stuff Done flag related to the special.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<code>sd1</code> is an index between <code>0</code> and <code>299</code>.<br>
+					<code>sd2</code> is an index between <code>0</code> and <code>9</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="SpecialMessageData" role="tabpanel">
+				<p class="description-head">
+					Data related to the message part of the special (if any).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Depends on the special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="SpecialExtraFields" role="tabpanel">
+				<p class="description-head">
+					All purpose fields used by the special.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Depends on the special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="SpecialJumpTo" role="tabpanel">
+				<p class="description-head">
+					Which special node to jump to when finished, clicked on OK, etc.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any valid special node id (unchecked codewise).
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

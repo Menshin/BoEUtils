@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Creature Start</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartNumber" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>number</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartAttitude" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000001</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>start_attitude</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartLoc" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>start_loc</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartMobile" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000004</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>mobile</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartTimeFlag" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000005</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>time_flag</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartExtras" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000006</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>extra1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000007</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>extra2</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartSpecs" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000008</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>spec1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00000A</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>spec2</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartSpecEncCode" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000C</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>spec_enc_code</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartTimeCode" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000D</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>time_code</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartMonsterTime" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000E</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>monster_time</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartPersonality" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000010</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>personality</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartSpecialOnKill" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000012</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>special_on_kill</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#CreatureStartFacialPic" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000014</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>facial_pic</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x16 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartNumber" role="tabpanel">
+				<p class="description-head">
+					The index of the monster template in the current scenario monsters data.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Index in the <code>scenario.scen_monsters[]</code> : so between <code>1</code> and <code>255</code>, inclusive (first 188 monsters are base game templates).<br>
+					Value <code>0</code> for no monster.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartAttitude" role="tabpanel">
+				<p class="description-head">
+					The starting attitude of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Behavior</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>Friendly to party, docile</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Hostile to party, faction A</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Friendly to party, will fight</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Hostile to party, faction B</td>
+								</tr>
+							</tbody>
+						</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartLoc" role="tabpanel">
+				<p class="description-head">
+					Initial location of the monster.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartMobile" role="tabpanel">
+				<p class="description-head">
+					Whether the creature can initialy move (e.g merchant remaining stationary until a fight erupt).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean (as an <code>unsigned char</code>).
+					
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartTimeFlag" role="tabpanel">
+				<p class="description-head">
+					Flag controlling the monster presence in town (e.g travelling merchant).
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Behavior</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>Always here</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Appear on given day</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Disappear on given day</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Unused<br>(say so in the code, but to double check)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">4</code></td>
+									<td>Sometimes appears here (location A)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">5</code></td>
+									<td>Sometimes appears here (location B)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">6</code></td>
+									<td>Sometimes appears here (location C)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">7</code></td>
+									<td>Appear when event</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">8</code></td>
+									<td>Disappear when event</td>
+								</tr>
+							</tbody>
+						</table>
+				</p>
+			  </div>
+			 
+			 <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartExtras" role="tabpanel">
+				<p class="description-head">
+					Extra fields, seems to only to be used in certain shops (healer, ...).
+				</p>
+				<p>
+					<h5>Value</h5>
+					To investigate.
+				</p>
+			  </div>
+			  
+			   <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartSpecs" role="tabpanel">
+				<p class="description-head">
+					The <code>party.stuff_done[spec1][spec2]</code> to which the creature life is tied (i.e <code>PSD[spec1][spec2]</code> is set to 1 when the monster is killed, 0 otherwise).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Valid PSD value : between <code>0</code> and <code>299</code> for <code>spec1</code> and between <code>0</code> and <code>9</code> for <code>spec2</code>.
+				</p>
+			  </div>
+			  
+			   <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartSpecEncCode" role="tabpanel">
+				<p class="description-head">
+					The town special encounter the monster is part of (i.e the monster is not placed until the special encounter is triggered).
+				</p>
+				<p>
+					<h5>Value</h5>
+					From <code>0 (none)</code> to <code>10</code>, inclusive.
+				</p>
+			  </div>
+			  
+			   <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartTimeCode" role="tabpanel">
+				<p class="description-head">
+					Used with <code>time_flag</code> to specify which event to check for appeareance.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Index in <code>party.key_times[]</code>, checked against <code>monster_time</code> (+20 apparently). Think of it as "has key time been reached ?".
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartMonsterTime" role="tabpanel">
+				<p class="description-head">
+					Used with <code>time_flag</code> to specify on which day the monster is to appear.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any valid day value.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartPersonality" role="tabpanel">
+				<p class="description-head">
+					Which talking personality the monster has.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>town_number x 10 + 0</code> and <code>town_number x 10 + 9</code> or <code>-1</code> if no personality.<br>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartSpecialOnKill" role="tabpanel">
+				<p class="description-head">
+					The index of the town special to trigger on death.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Index in <code>town.specials[]</code>, so between <code>0</code> and <code>99</code> or <code>-1</code> if none.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="CreatureStartFacialPic" role="tabpanel">
+				<p class="description-head">
+					Id of the facial pic used during dialog with this type of monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>1</code> and <code>84</code>
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

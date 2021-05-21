@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Talking Record</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingRecordStrlens" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>strlens[200]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingRecordTalkNodes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000C8</td>
+						<td class="typeCol"><code>talking_node_type</code></td>
+						<td class="nameCol"><code>talk_nodes[60]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x578 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TalkingRecordStrlens" role="tabpanel">
+				<p class="description-head">
+					The length of all talking strings for the current town.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>255</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TalkingRecordTalkNodes" role="tabpanel">
+				<p class="description-head">
+					The talking nodes for the current town.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="TalkingNodeType.html">Talking Node</a>
+				</p>
+			  </div>
+			  
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

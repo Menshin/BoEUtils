@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Monster Record</h3>
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterNumber" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>m_num</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterLevel" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000001</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>level</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterName" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>m_name[26]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterHealth" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00001C</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>health</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMaxHealth" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00001E</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>m_health</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMP" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000020</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>mp</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMaxMP" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000022</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>m_mp</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterArmor" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000024</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>armor</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterSkill" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000025</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>skill</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterAttacks" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000026</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>a[3]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterAttackTypes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00002C</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>a1_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterAttackTypes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00002D</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>a23_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00002E</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>m_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterSpeed" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00002F</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>speed</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterAP" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000030</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>ap</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMu" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000031</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>mu</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterCl" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000032</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>cl</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterBreath" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000033</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>breath</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterBreathType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000034</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>breath_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterTreasure" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000035</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>treasure</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterSpecSkill" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000036</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>spec_skill</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterPoison" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000037</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>poison</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMorale" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000038</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>morale</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterMaxMorale" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00003A</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>m_morale</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterCorpseItem" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00003C</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>corpse_item</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterCorpseItemChance" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00003E</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>corpse_item_chance</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterStatus" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000041</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>status[15]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterDirection" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00005F</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>direction</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterImmunities" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000060</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>immunities</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterWidths" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000061</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>x_width</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000062</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>y_width</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterRadiate1" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000063</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>radiate1</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterRadiate2" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000064</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>radiate2</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterDefaultAttitude" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000065</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>default_attitude</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterSummonType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000066</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>summon_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterDefaultFacialPic" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000067</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>default_facial_pic</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterReserved" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000068</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>res1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000069</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>res2</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00006A</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>res3</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#MonsterPictureNum" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00006B</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>picture_num</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x6C bytes
+		  </div>
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterNumber" role="tabpanel">
+				<p class="description-head">
+					The index of the monster template in the current scenario monsters data.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Index in the <code>scenario.scen_monsters[]</code> : so between <code>1</code> and <code>255</code>, inclusive (first 188 monsters are base game templates).<br>
+					Value <code>0</code> for no monster.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterLevel" role="tabpanel">
+				<p class="description-head">
+					The level of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>40</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterName" role="tabpanel">
+				<p class="description-head">
+					C-string containing the monster name.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any char string, but only the first 19 chars are actually copied on saving.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterHealth" role="tabpanel">
+				<p class="description-head">
+					Current health of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>m_health</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMaxHealth" role="tabpanel">
+				<p class="description-head">
+					Max health of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>2500</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMP" role="tabpanel">
+				<p class="description-head">
+					Current magic points of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>m_mp</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMaxMP" role="tabpanel">
+				<p class="description-head">
+					Max magic points of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<ul>
+					<li>No cleric or mage level : <code>0</code></li>
+					<li>At least one level of cleric or mage : <code>14 × level</code></li>
+					</ul>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterArmor" role="tabpanel">
+				<p class="description-head">
+					Armor value of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>50</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterSkill" role="tabpanel">
+				<p class="description-head">
+					Skill level of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>40</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterAttacks" role="tabpanel">
+				<p class="description-head">
+					Attacks of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Up to 3 attacks in the format : <code>100 × numbers_of_dice_to_throw + number_of_side_on_a_dice </code> where :
+					<ul>
+						<li><code>numbers_of_dice_to_throw</code> is a integer between <code>0</code> and <code>20</code> inclusive;</li>
+						<li><code>number_of_side_on_a_dice</code> is a integer between <code>1</code> and <code>50</code> inclusive.</li>
+					</ul>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterAttackTypes" role="tabpanel">
+				<p class="description-head">
+					Type of the monster attacks.
+				</p>
+				<p>
+					<h5>Value</h5>
+					  <table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Attack type</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Hits/Swings</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Claws</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Bites</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Slimes</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Hits/Punches</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">5</code></td>
+								<td>Stings</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">6</code></td>
+								<td>Clubs</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">7</code></td>
+								<td>Burns</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">8</code></td>
+								<td>Harms</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Stabs</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterType" role="tabpanel">
+				<p class="description-head">
+					Type of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					  <table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Monster type</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Human</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Reptile</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Beast</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Important</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Mage</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">5</code></td>
+								<td>Priest</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">6</code></td>
+								<td>Humanoid</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">7</code></td>
+								<td>Demon</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">8</code></td>
+								<td>Undead</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Giant</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">10</code></td>
+								<td>Slime</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">11</code></td>
+								<td>Stone</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">12</code></td>
+								<td>Bug</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">13</code></td>
+								<td>Dragon</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">14</code></td>
+								<td>Magical Creature</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterSpeed" role="tabpanel">
+				<p class="description-head">
+					Speed of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>2</code> and <code>12</code>, inclusive. Directly translates into the monster base AP in combat.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterAP" role="tabpanel">
+				<p class="description-head">
+					Current AP remaining for the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any valid AP value between <code>0</code> (no action) and <code>24</code> (monster speed at 12 + haste), inclusive. Directly translates into the monster base AP in combat.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterSpeed" role="tabpanel">
+				<p class="description-head">
+					Speed of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>2</code> and <code>12</code>, inclusive. Directly translates into the monster base AP in combat.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMu" role="tabpanel">
+				<p class="description-head">
+					Mage level of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>7</code>, inclusive.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterCl" role="tabpanel">
+				<p class="description-head">
+					Cleric level of the monster.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any value between <code>0</code> and <code>7</code>, inclusive.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterBreath" role="tabpanel">
+				<p class="description-head">
+					Strengh of the monster breath attack, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Supposedly, any value between <code>0</code> and <code>40</code>, inclusive. Total Damage is <code>breath</code>d8. Broken checks everywhere for this one (no upper limit).
+				</p>
+			  </div>
+			  
+			 			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterBreathType" role="tabpanel">
+				<p class="description-head">
+					The type of the monster breath attack, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Breath type</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Fire</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Cold</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Electricity</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Darkness</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterTreasure" role="tabpanel">
+				<p class="description-head">
+					The treasure table from which to pull loot when defeated (see <a href="ItemRecordType">item record type</a> <code>treas_class</code>).
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Treasure table</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Junk (doesn't appear)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Lousy (value between 1 and 20 gp)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>So-so (value between 20 and 200 gp)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Good (value greater than 200 gp)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Great (value greater than 2500 gp)</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade ps-2" id="MonsterSpecSkill" role="tabpanel">
+				<p class="description-head">
+					The id of the monster special skill, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<div class="col-4 position-static float-start small">
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Special Skill</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>No special ability</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Throws darts</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Shoots arrows</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Throws spears</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Throws rocks (dam 2-12)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">5</code></td>
+								<td>Throws rocks (dam 3-18)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">6</code></td>
+								<td>Throws rocks (dam 4-24)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">7</code></td>
+								<td>Throws rocks (dam 5-30)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">8</code></td>
+								<td>Throws rocks (dam 6-36)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Throws razordisks</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">10</code></td>
+								<td>Petrification ray</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">11</code></td>
+								<td>Spell point drain ray</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">12</code></td>
+								<td>Heat ray</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">13</code></td>
+								<td>Invisible</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">14</code></td>
+								<td>Splits when hit</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">15</code></td>
+								<td>Mindless (resists fear)</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<div class="col-4 position-static float-start">
+					<table class="table-bordered border-dark text-center small">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Special Skill</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">16</code></td>
+								<td>Breathes stinking clouds</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">17</code></td>
+								<td>Icy touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">18</code></td>
+								<td>Experience draining touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">19</code></td>
+								<td>Icy and draining touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">20</code></td>
+								<td>Slowing touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">21</code></td>
+								<td>Shoots webs</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">22</code></td>
+								<td>Good archer</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">23</code></td>
+								<td>Steals food when hits</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">24</code></td>
+								<td>Permanent martyr's shield</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">25</code></td>
+								<td>Paralysis ray</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">26</code></td>
+								<td>Dumbfounding touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">27</code></td>
+								<td>Disease touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">28</code></td>
+								<td>Absorb spells</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">29</code></td>
+								<td>Web touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">30</code></td>
+								<td>Sleep touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">31</code></td>
+								<td>Paralysis touch</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					
+					<div class="col-4 position-static float-start">
+					<table class="table-bordered border-dark text-center small">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Special Skill</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">32</code></td>
+								<td>Petrification touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">33</code></td>
+								<td>Acid touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">34</code></td>
+								<td>Breathe sleep clouds</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">35</code></td>
+								<td>Acid spit</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">36</code></td>
+								<td>Shoot spines</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">37</code></td>
+								<td>Death touch</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">38</code></td>
+								<td>Invulnerable</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">39</code></td>
+								<td>Guard</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					</p>
+				  </div>
+					  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterPoison" role="tabpanel">
+					<p class="description-head">
+						The severity of the monster poison, if any.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Any integer between <code>0</code> and <code>8</code>, inclusive.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMorale" role="tabpanel">
+					<p class="description-head">
+						The morale of the monster poison, if too low it will flee.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Capped at <code>m_morale</code> (can be negative, no lower bound).
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterMaxMorale" role="tabpanel">
+					<p class="description-head">
+						The max value of the monster's morale.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<ul>
+							<li>if (<code>level >= 20</code>) : <code>10 × level + 10 × (level - 20) </code></li>
+							<li>else : <code>10 × level</code></li>
+						</ul>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterCorpseItem" role="tabpanel">
+					<p class="description-head">
+						The id of an item the monster has a chance to drop on death (e.g gland, husk, etc).
+					</p>
+					<p>
+						<h5>Value</h5>
+						Either <code>-1</code> for no item to drop or any valid item id, so between <code>0</code> and <code>399</code> inclusive.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterCorpseItemChance" role="tabpanel">
+					<p class="description-head">
+						Probability of any corpse item to drop.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Percentage, so between <code>0</code> and <code>100</code>. 
+					</p>
+				  </div>
+				  
+			<div class="tab-pane fade ps-2" id="MonsterStatus" role="tabpanel">
+				<p class="description-head">
+					Array containing the differents effects and afflictions applied to the monster (slowed/hasted, blessed/cursed, poisoned, etc).
+				</p>
+				<p>
+					<h5>Value</h5>
+					<div class="col-6 position-static float-start small">
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Index</code></th>
+							  <th scope="col" class="fs-5"><code>Status</code></th>
+							  <th scope="col" class="fs-5"><code>Value range</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Poisoned Weapon</td>
+								<td>Positive (no hardcoded cap, limited by the poison level)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Bless/Curse</td>
+								<td>
+									<ul>
+										<li>Blessed : between <code>0</code> and <code>8</code></li>
+										<li>Cursed : between <code>-8</code> and <code>8</code></li>
+									</ul>
+									Broken for blessed (see Bless Spells not using the wrapper for PC)
+								</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Poison</td>
+								<td>Between <code>0</code> and <code>8</code></td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Haste/Slow</td>
+								<td>
+									<ul>
+										<li>Hasted : between <code>0</code> and <code>8</code></li>
+										<li>Slowed : between <code>-8</code> and <code>8</code></li>
+									</ul>
+									Broken for haste (see Haste Spells not using the wrapper)
+								</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Invulnerable</td>
+								<td>Positive (no hardcoded cap, limited by the stat adjust bonus)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">5</code></td>
+								<td>Magic Resistance</td>
+								<td>Positive (no hardcoded cap, limited by the stat adjust bonus)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">6</code></td>
+								<td>Webs</td>
+								<td>Between <code>0</code> and <code>8</code></td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">7</code></td>
+								<td>Disease</td>
+								<td>Between <code>0</code> and <code>8</code></td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">8</code></td>
+								<td>Sanctuary</td>
+								<td>Positive (no hardcoded cap, limited by the stat adjust bonus and the caster level)</td>
+							</tr>
+							</tbody>
+						</table>
+				  </div>
+				  <div class="col-6 position-static float-start small">
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Index</code></th>
+							  <th scope="col" class="fs-5"><code>Status</code></th>
+							  <th scope="col" class="fs-5"><code>Value range</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Dumbfound</td>
+								<td>Between <code>0</code> and <code>8</code></td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">10</code></td>
+								<td>Martyr's Shield</td>
+								<td>Between <code>0</code> and <code>10</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">11</code></td>
+								<td>Sleep</td>
+								<td>Positive (no upper cap, but not additive : new status value replace the previous status)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">12</code></td>
+								<td>Paralyze</td>
+								<td>Positive (no upper cap, but not additive : new status value replace the previous status)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">13</code></td>
+								<td>Acid</td>
+								<td>Positive (no upper cap AND additive)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">14</code></td>
+								<td><i>Unused</i></td>
+								<td><i>N.A</i></td>
+							</tr>		
+						</tbody>
+					</table>
+					</div>
+
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterDirection" role="tabpanel">
+					<p class="description-head">
+						The direction the monster is currently facing.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Value</code></th>
+								  <th scope="col" class="fs-5"><code>Direction</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>North</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Northeast</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>East</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Southeast</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">4</code></td>
+									<td>South</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">5</code></td>
+									<td><i>Southwest</i></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">6</code></td>
+									<td><i>West</i></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">7</code></td>
+									<td><i>Northwest</i></td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterImmunities" role="tabpanel">
+					<p class="description-head">
+						Bitfield related to the monster immunities.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Bit</code></th>
+								  <th scope="col" class="fs-5"><code>Immunity</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0x01</code></td>
+									<td>Magic Resistance</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x02</code></td>
+									<td>Magic Immunity</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x04</code></td>
+									<td>Fire Resistance</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x08</code></td>
+									<td>Fire Immunity</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x10</code></td>
+									<td>Cold Resistance</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x20</code></td>
+									<td><i>Cold Immunity</i></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x40</code></td>
+									<td><i>Poison Resistance</i></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">0x80</code></td>
+									<td><i>Poison Immunity</i></td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+			  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterWidths" role="tabpanel">
+					<p class="description-head">
+						The dimensions of the monster sprite.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Hardcoded for base game monsters, specified using <code>picture_num</code> for custom ones.
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Picture_number</code></th>
+								  <th scope="col" class="fs-5"><code>Dimensions</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">1000 &lt= picture_num &lt 2000</code></td>
+									<td><code class="fs-5">1 x 1</code></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2000 &lt= picture_num &lt 3000</code></td>
+									<td><code class="fs-5">2 x 1</code></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3000 &lt= picture_num &lt 4000</code></td>
+									<td><code class="fs-5">1 x 2</code></td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">4000 &lt= picture_num &lt 5000</code></td>
+									<td><code class="fs-5">2 x 2</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterRadiate1" role="tabpanel">
+					<p class="description-head">
+						Any cloud/field radiating or monster summoning ability the monster possesses. Also handles "call special on death".
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Value</code></th>
+								  <th scope="col" class="fs-5"><code>Ability</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>No ability</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Radiate fire fields</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Radiate ice fields</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Radiate shock fields</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">4</code></td>
+									<td>Radiate antimagic fields</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">5</code></td>
+									<td>Radiate sleep fields</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">6</code></td>
+									<td>Radiate stink clouds</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">7 -> 9</code></td>
+									<td>Unused</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">10</code></td>
+									<td>Summon monster (5 chance)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">11</code></td>
+									<td>Summon monster (20 chance)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">12</code></td>
+									<td>Summon monster (50 chance)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">13 -> 14</code></td>
+									<td>Unused</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">15</code></td>
+									<td>Call special on death</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterRadiate2" role="tabpanel">
+					<p class="description-head">
+						Variable specifying the behavior of the <code>radiate1</code> variable
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col"><code class="fs-5">radiate1</code> behavior</th>
+								  <th scope="col"><code class="fs-5">radiate2</code> meaning</th>
+								  <th scope="col"><code class="fs-5">radiate2</code> range</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Radiate field/cloud</td>
+									<td>Field/Cloud spawning chance</td>
+									<td>Between <code>0</code> and <code>100</code></td>
+								</tr>
+								<tr>
+									<td>Spawn monster</td>
+									<td>Id of the monster to spawn</td>
+									<td>Between <code>0</code> and <code>255</code></td>
+								</tr>
+								<tr>
+									<td>Call special on death</td>
+									<td>The id of the special node to call</td>
+									<td>Between <code>0</code> and <code>255</code><br>Warning : no rangecheck on call</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterDefaultAttitude" role="tabpanel">
+					<p class="description-head">
+						Variable specifying the behavior of the <code>radiate1</code> variable
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Behavior</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>Friendly to party, docile</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Hostile to party, faction A</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Friendly to party, will fight</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Hostile to party, faction B</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterSummonType" role="tabpanel">
+					<p class="description-head">
+						Which summon table the monster belongs to.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Summon table</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>No summonable</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Weak summon spells</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Summon spells</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Major summon spells</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterDefaultFacialPic" role="tabpanel">
+					<p class="description-head">
+						Id of the facial pic used during dialog with this type of monster.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Between <code>1</code> and <code>84</code>.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterReserved" role="tabpanel">
+					<p class="description-head">
+						Reserved bits.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Never set (<code>0</code>).
+					</p>
+				  </div>
+				  
+			      <div class="tab-pane fade border border-secondary rounded ps-2" id="MonsterPictureNum" role="tabpanel">
+					<p class="description-head">
+						The id of the monster sprite.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Id range</th>
+								  <th scope="col">Meaning</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>No picture (invisible).</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 <= picture_num < 1000</code></td>
+									<td>Standard monster graphic</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1000 <= picture_num</code></td>
+									<td>Custom monster graphic (uses <code>picture_num - 1000 </code>)</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

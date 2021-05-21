@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Town Record</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordChopTime" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>town_chop_time</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordChopKey" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>town_chop_key</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordWandering" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000004</td>
+						<td class="typeCol"><code>wandering_type</code></td>
+						<td class="nameCol"><code>wandering[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordWanderingLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000014</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>wandering_locs[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSpecialLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00001C</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>special_locs[50]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSpecId" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000080</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>spec_id[50]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSignLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000B2</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>sign_locs[15]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordLighting" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000D0</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>lighting</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordStartLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000D2</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>start_locs[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordExitLocs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000DA</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>exit_locs[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordExitSpecs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000E2</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>exit_spec[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordInTownRect" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000EA</td>
+						<td class="typeCol"><code>RECT</code></td>
+						<td class="nameCol"><code>in_town_rect</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordPresetItems" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0000F2</td>
+						<td class="typeCol"><code>preset_item_type</code></td>
+						<td class="nameCol"><code>preset_items[64]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordMaxNumMonsters" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000372</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>max_num_monst</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordPresetFields" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000374</td>
+						<td class="typeCol"><code>preset_field_type</code></td>
+						<td class="nameCol"><code>preset_fields[50]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSpecOnEntry" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00043C</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>spec_on_entry</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSpecOnEntryIfDead" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00043E</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>spec_on_entry_if_dead</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordTimerSpecTimes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000440</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>timer_spec_times[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+		
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordTimerSpecs" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000450</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>timer_specs[8]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordStrlens" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000460</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>strlens[180]</code></td>
+					</tbody>
+				</table>
+			  </button>
+		
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordSpecials" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000514</td>
+						<td class="typeCol"><code>special_node_type</code></td>
+						<td class="nameCol"><code>specials[100]</code></td>
+					</tbody>
+				</table>
+			  </button>
+		
+			 <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordUnused" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000DAC</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>specials1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000DAD</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>specials2</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000DAE</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>res1</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000DAF</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>res2</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			 <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TownRecordDifficulty" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000DB0</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>difficulty</code></td>
+					</tbody>
+				</table>
+			  </button>
+		
+			</div>
+			Size : 0xDB2 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordChopTime" role="tabpanel">
+				<p class="description-head">
+					The day the town is destroyed (note that there's a hardcoded 20 day delay for town destruction, e.g if the town if <code>town_chop_time</code> is set to 1, the town will be destroyed in day 21).
+				</p>
+				<p> 
+					<h5>Value</h5>
+					Any valid day (between <code>1</code> and <code>255</code> (inclusive) since the value is passed as <code>unsigned char</code> to <code>day_reached()</code>) or 0 if the town is never destroyed.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordChopKey" role="tabpanel">
+				<p class="description-head">
+					The <code>party.key_times[]</code> index to check to prevent the town destruction.
+				</p>
+				<p>
+					
+					<h5>Value</h5>
+					Between <code>0</code> and <code>9</code>, inclusive (apparently <code>8</code> makes the event always happens and the values are shifted one up (from <code>1</code> to <code>10</code>). Buggy as hell, to check in-game).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordWandering" role="tabpanel">
+				<p class="description-head">
+					The wandering parties to randomly spawn, if any.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Wandering.html">Wandering Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordWanderingLocs" role="tabpanel">
+				<p class="description-head">
+					The spawn location of the wandering parties.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSpecialLocs" role="tabpanel">
+				<p class="description-head">
+					The locations of the town special encounters.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Any valid location for the current town (depends on town size).<br>
+					<i>Special case</i> : <code>special_locs[i].x</code> is set to <code>100</code>, if there's no special to place.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSpecId" role="tabpanel">
+				<p class="description-head">
+					The indexes of town specials encounters in the <code>specials[]</code> struct array.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>99</code>, inclusive or <code>-1</code> if there's no special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSignLocs" role="tabpanel">
+				<p class="description-head">
+					The location of any placed signs in the town.
+				</p>
+				<p>
+				    <h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordLighting" role="tabpanel">
+				<p class="description-head">
+					Describes the kind of lighting there's in this town.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col" class="fs-5"><code>Value</code></th>
+									  <th scope="col" class="fs-5"><code>Lighting type</code></th>
+									</tr>
+								</thead>
+								<tbody>
+
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>Fully lit</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Normal darkness</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Deep darkness (light sources used x10 faster as normal)</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Full/Magical darkness (light sources instantly drained)</td>
+								</tr>
+							</tbody>
+						</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordStartLocs" role="tabpanel">
+				<p class="description-head">
+					Locations where the party will be placed when entering the town.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					<p>
+						Indexes related to entering directions :
+						<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col" class="fs-5"><code>Index</code></th>
+									  <th scope="col" class="fs-5"><code>Entering from</code></th>
+									</tr>
+								</thead>
+								<tbody>
+
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>North</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>West</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>South</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>East</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordExitLocs" role="tabpanel">
+				<p class="description-head">
+					The locations <b> in the current outdoor chunk</b> the party will be placed on when exiting the town from a given direction.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					<p>
+						<b>Special case :</b> <code>exit_locs[].x = -1</code> if not set (aka use default exiting location, i.e just move in the same direction outdoor).
+						Indexes related to exiting directions :
+						<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col" class="fs-5"><code>Index</code></th>
+									  <th scope="col" class="fs-5"><code>Exiting from</code></th>
+									</tr>
+								</thead>
+								<tbody>
+
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>North</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>West</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>South</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>East</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordExitSpecs" role="tabpanel">
+				<p class="description-head">
+					The index of the special in the <code>specials[]</code> member of the struct to trigger on exiting.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>99</code>, inclusive or <code>-1</code> if there's no special.<br>
+					Indexes related to exiting directions :
+					<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Index</code></th>
+								  <th scope="col" class="fs-5"><code>Exiting from</code></th>
+								</tr>
+							</thead>
+							<tbody>
+
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>North</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>West</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>South</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>East</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordInTownRect" role="tabpanel">
+				<p class="description-head">
+					The boundaries of the town (town is everything inside the RECT).
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="RECT.html">RECT</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordPresetItems" role="tabpanel">
+				<p class="description-head">
+					The items to place in town on first loading.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="PresetItemType.html">Preset Item Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordMaxNumMonsters" role="tabpanel">
+				<p class="description-head">
+					The numbers of killed town monsters after which the town becomes abandoned.
+				</p>
+				<p>
+					<h5>Value</h5>
+					By default, <code>30 000</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordPresetFields" role="tabpanel">
+				<p class="description-head">
+					The fields to place in town on first loading.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="PresetFieldType.html">Preset Fields Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSpecOnEntry" role="tabpanel">
+				<p class="description-head">
+					The index of the special to trigger when entering town in the <code>specials[]</code> array of the struct.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>99</code>, inclusive or <code>-1</code> if no special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSpecOnEntryIfDead" role="tabpanel">
+				<p class="description-head">
+					The index of the special to trigger when entering town and it's abandoned in the <code>specials[]</code> array of the struct.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>99</code>, inclusive or <code>-1</code> if no special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordTimerSpecTimes" role="tabpanel">
+				<p class="description-head">
+					The age on which the timed specials events are to be triggered.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Set to <code>0</code> if no timed event for this index.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordTimerSpecs" role="tabpanel">
+				<p class="description-head">
+					The index of the special to trigger when the timer is reached in the <code>specials[]</code> array of the struct.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>99</code>, inclusive or <code>-1</code> if no special.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordStrlens" role="tabpanel">
+				<p class="description-head">
+					The length of town strings (Outdoor text in the editor).
+				</p>
+				<p>
+					<h5>Value</h5>
+					The first 140 values are the first 140 strings length.<br>
+					The last 40 values are not used (set to 0).
+				</p>
+			  </div>
+			  
+				<div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordSpecials" role="tabpanel">
+				<p class="description-head">
+					The town specials.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="SpecialNodeType.html">Special Node Type</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordUnused" role="tabpanel">
+				<p class="description-head">
+					Unused vars, leftovers from previous Exile games or reserved values.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Apparently <code>specials2</code> was used to prevent magic mapping from working on a given town (check against <code>specials2 % 10 == 1</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownRecordDifficulty" role="tabpanel">
+				<p class="description-head">
+					The difficulty of the town (add to lockpick/doorbash rolls, make wandering monsters appears more frequently, etc). Buggy, to investigate.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>10</code>.
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

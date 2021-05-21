@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Preset Field</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetFieldLoc" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>field_loc</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#PresetFieldType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>field_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			</div>
+			Size : 0x4 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="PresetFieldLoc" role="tabpanel">
+				<p class="description-head">
+					The location of the field in the town.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade ps-2" id="PresetFieldType" role="tabpanel">
+				<p class="description-head">
+					Which type of the field is.</b>.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<div class="col-4 position-static float-start">
+						<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col" class="fs-5"><code>Value</code></th>
+									  <th scope="col" class="fs-5"><code>Field type</code></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code class="fs-5">0</code></td>
+										<td>None</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">1</code></td>
+										<td>Unused ? (explored ?)</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">2</code></td>
+										<td>Special present</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">3</code></td>
+										<td>Web</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">4</code></td>
+										<td>Crate</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">5</code></td>
+										<td>Barrel</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">6</code></td>
+										<td>Fire Barrier</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">7</code></td>
+										<td>Force Barrier</td>
+									</tr>
+									<tr>
+										<td><code class="fs-5">8</code></td>
+										<td>Quickfire</td>
+									</tr>
+								</tbody>
+							</table>
+							Translates to a bitfield in <code>misc[][]</code>.
+						</div>
+						<div class="col-4 position-static float-start">
+							<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col" class="fs-5"><code>Value</code></th>
+									  <th scope="col" class="fs-5"><code>SFX type</code></th>
+									</tr>
+								</thead>
+								<tbody>
+
+								<tr>
+									<td><code class="fs-5">14</code></td>
+									<td>Small blood</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">15</code></td>
+									<td>Medium blood</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">16</code></td>
+									<td>Large blood</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">17</code></td>
+									<td>Small slime</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">18</code></td>
+									<td>Big slime</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">19</code></td>
+									<td>Ash</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">20</code></td>
+									<td>Bones</td>
+								</tr>
+																<tr>
+									<td><code class="fs-5">21</code></td>
+									<td>Rubble</td>
+								</tr>
+							</tbody>
+						</table>
+						Used for in-game sfx spawning (only).<br>
+						Translated to a bitfield in <code>sfx[][]</code> as <code>2 << 14 - field_type</code>.
+					</div>
+				</p>
+			  </div>
+			  
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

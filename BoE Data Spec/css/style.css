@@ -1,0 +1,80 @@
+body {
+  padding-top: 5rem;
+}
+
+.typeCol{
+	font-weight:bold;
+	font-style:italic;
+	padding-right:1em;
+	padding-left: 5px;
+}
+
+.typeOffset{
+	font-weight:bold;
+	padding-right:3px;
+	font-size: 0.8em;
+	border-right:solid 1px;
+}
+
+
+.list-group-item-field{
+	color:#636464;
+	background-color:#fefefe;
+}
+.list-group-item-field.list-group-item-action:focus, .list-group-item-field.list-group-item-action:hover{
+	/*color:#414242;*/
+	color:#636464;
+	/*background-color:#cff4fc;*/
+	background-color:#f8f8f8;
+}
+
+.list-group-item-field.list-group-item-action.active{
+	/*color:#414242;*/
+	color:#636464;
+	/*background-color:#caeff7;*/
+	background-color:#e5e5e5;
+	/*border-color:#cbf0f8;*/
+	border-color:#e5e5e5;
+}
+
+.description{
+	font-family:serif;
+	font-size:1.05em;
+}
+
+.description-head{
+	font-style:italic;
+	font-family:serif;
+	font-size:1.2em;
+}
+
+code.BoE{
+	color:#21265c;
+}
+
+.bgcolor{
+	background-color:#f5f5f5;
+}
+
+.table-head{
+	background-color:#f5f5f5;
+}
+
+.table-head.small{
+	font-size: 0.9em;
+}
+
+.tabContentPanel{
+	margin-top: 5rem;
+	overflow:auto;
+}
+
+.auto_overflow{
+	overflow:auto;
+}
+
+.staytop{
+  position: fixed;
+  top: 4rem;
+  width:60%;
+}

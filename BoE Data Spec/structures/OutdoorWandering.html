@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+			  <h3 class="text-center">Outdoor Wandering Type</h3>
+				<div class="list-group border border-dark" id="list-tab" role="tablist">				
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderMonst" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x000000</td>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>monst[7]</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+					
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderFriendly" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x000007</td>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>friendly[3]</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderSpecOnMeet" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x00000a</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>spec_on_meet</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+					
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderSpecOnWin" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x00000c</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>spec_on_win</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+					
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderSpecOnFlee" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x00000e</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>spec_on_flee</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderCantFlee" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x000010</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>cantflee</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+
+					<button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#OutdoorWanderEndSpecs" role="tab">
+						<table>
+							<tbody>
+								<tr>
+									<td class="typeOffset">0x000012</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>end_spec1</code></td>
+								</tr>
+								<tr>
+									<td class="typeOffset">0x000014</td>
+									<td class="typeCol"><code>short</code></td>
+									<td class="nameCol"><code>end_spec2</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</button>
+
+				</div>
+				Size : 0x16 bytes
+			</div>
+			
+			<div class="col">
+				<h3 class="text-center">&nbsp </h3>
+				<div class="tab-content" id="nav-tabContent">
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderMonst" role="tabpanel">
+					<p class="description-head">
+						The index of the hostile monsters to spawn in the <code>scenario.scen_monsters[]</code> array.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Valid monster number : between <code>0</code> and <code>255</code>, inclusive (first 188 monsters are base game templates).
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderFriendly" role="tabpanel">
+					<p class="description-head">
+						The index of the friendly monsters to spawn in the <code>scenario.scen_monsters[]</code> array.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Valid monster number : between <code>0</code> and <code>255</code>, inclusive (first 188 monsters are base game templates).
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderSpecOnMeet" role="tabpanel">
+					<p class="description-head">
+						The number of the special to launch when the wandering group is encountered (index in the <code>outdoors[party.i_w_c.x][party.i_w_c.y].specials[]</code> array).
+					</p>
+					<p>
+						<h5>Value</h5>
+						Valid outdoor special number : between <code>0</code> and <code>59</code>, inclusive.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderSpecOnWin" role="tabpanel">
+					<p class="description-head">
+						The number of the special to launch when the combat is won (index in the <code>outdoors[party.i_w_c.x][party.i_w_c.y].specials[]</code> array).
+					</p>
+					<p>
+						<h5>Value</h5>
+						Valid outdoor special number : between <code>0</code> and <code>59</code>, inclusive.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderSpecOnFlee" role="tabpanel">
+					<p class="description-head">
+						The number of the special to launch when the combat is successfully fleed from (index in the <code>outdoors[party.i_w_c.x][party.i_w_c.y].specials[]</code> array).
+					</p>
+					<p>
+						<h5>Value</h5>
+						Valid outdoor special number : between <code>0</code> and <code>59</code>, inclusive.
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderCantFlee" role="tabpanel">
+					<p class="description-head">
+						Whether the party can flee the encounter.
+					</p>
+					<p>
+						<h5>Value</h5>
+						Used as a boolean but apparently never set (and there's some leftover of values >10).
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="OutdoorWanderEndSpecs" role="tabpanel">
+					<p class="description-head">
+						Which <code>PartyStuffDone</code> to check to prevent encounter from spawning.
+					</p>
+					<p>
+						<h5>Value</h5>
+						If <code>PSD[end_spec1][end_spec2]</code> is set (greater than <code>0</code>), don't spawn the encounter.
+					</p>
+				  </div>
+				  
+				</div>
+			  </div>
+			
+		</div>
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script> 
+  </body>
+</html>

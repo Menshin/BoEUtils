@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Item Storage Shortcut</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemStorageShortcutTerType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>ter_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemStorageShortcutItemNum" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>item_num[10]</code></td>
+					</tbody>
+				</table>
+			  </button>		
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemStorageShortcutItemOdds" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000016</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>item_odds[10]</code></td>
+					</tbody>
+				</table>
+			  </button>		
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemStorageShortcutProperty" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x00002A</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>property</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>			  
+			</div>
+			Size : 0x2C bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemStorageShortcutTerType" role="tabpanel">
+				<p class="description-head">
+					The type of the terrain the item can be put on by the randomizer.
+				</p>
+				<p>
+					<h5>Values</h5>
+					Any integer between <code>-1</code> (no shortcut) and <code>255</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemStorageShortcutItemNum" role="tabpanel">
+				<p class="description-head">
+					The number of the item to be randomly placed.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Any integer between <code>-1</code> (no item) and <code>399</code>.<br>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemStorageShortcutItemOdds" role="tabpanel">
+				<p class="description-head">
+					The odd of an item to be placed on a matching tile (percentage).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Percentage, so between <code>0</code> and <code>100</code>.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemStorageShortcutProperty" role="tabpanel">
+				<p class="description-head">
+					Specify if the item placed is someone's property or not.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean (inside a short).
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

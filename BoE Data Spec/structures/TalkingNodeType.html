@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Talking Node</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingNodePersonality" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>personality</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingNodeType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingNodeLinks" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000004</td>
+							<td class="typeCol"><code>char</code></td>
+							<td class="nameCol"><code>link1[4]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000008</td>
+							<td class="typeCol"><code>char</code></td>
+							<td class="nameCol"><code>link2[4]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#TalkingNodeExtras" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000c</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>extras[4]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x14 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TalkingNodePersonality" role="tabpanel">
+				<p class="description-head">
+					Which talking personality the node is attached to.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>town_number x 10 + 0</code> and <code>town_number x 10 + 9</code> or <code>-1</code> if no personality.<br>
+					Special values : <code>-1</code> for node unused and <code>-2</code> if the node is used by all personalities.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade ps-2" id="TalkingNodeType" role="tabpanel">
+				<p class="description-head">
+					The type of the talking node.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<div class="col-4 position-static float-start">
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Talking Node Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">0</code></td>
+									<td>Regular Speech</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1</code></td>
+									<td>Response depends on (<code>SDF</code>) flag</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">2</code></td>
+									<td>Set (<code>SDF</code>) flag to 1</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">3</code></td>
+									<td>Inn</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">4</code></td>
+									<td>Depends on time</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">5</code></td>
+									<td>Depends on time and event</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">6</code></td>
+									<td>Depends on town</td>
+								</tr>
+							<tr>
+									<td><code class="fs-5">7</code></td>
+									<td>Buy Items</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">8</code></td>
+									<td>Training</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">9</code></td>
+									<td>Mage Spell Shop</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">10</code></td>
+									<td>Priest Spell Shop</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">11</code></td>
+									<td>Alchemy Shop</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">12</code></td>
+									<td>Healer</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">13</code></td>
+									<td>Sell Weapons</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-4 position-static float-start">
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Talking Node Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">14</code></td>
+									<td>Sell Armor</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">15</code></td>
+									<td>Sell All Items</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">16</code></td>
+									<td>Identify Items</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">17</code></td>
+									<td>Enchant Weapons</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">18</code></td>
+									<td>Pay For Response</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">19</code></td>
+									<td>Buy Response, Change Flag</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">20</code></td>
+									<td>Boat Shop</td>
+								</tr>
+							<tr>
+									<td><code class="fs-5">21</code></td>
+									<td>Horse Shop</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">22</code></td>
+									<td>Buy Special Item</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">23</code></td>
+									<td>Magic Shop</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">24</code></td>
+									<td>Reveal Town Location</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">25</code></td>
+									<td>Force Conversation End</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">26</code></td>
+									<td>Hostile Conversation End</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">27</code></td>
+									<td>Town Hostile Conversation End</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-4 position-static float-start">
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col">Value</th>
+								  <th scope="col">Talking Node Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">28</code></td>
+									<td>Eliminate Creature</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">29</code></td>
+									<td>Call Town Special</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">30</code></td>
+									<td>Call Scenario Special</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TalkingNodeLinks" role="tabpanel">
+				<p class="description-head">
+					The two four-letter words the personality will answer to with this node.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Four ascii letters.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TalkingNodeExtras" role="tabpanel">
+				<p class="description-head">
+					The four extras values potentially used by the node.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Depends on node type.
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

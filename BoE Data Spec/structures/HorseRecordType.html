@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Horse Record</h3>
+		  
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseLoc" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>horse_loc</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseLocInSec" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>horse_loc_in_sec</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseSector" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000004</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>horse_sector</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseWhichTown" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000006</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>which_town</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseExists" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000008</td>
+						<td class="typeCol"><code>bool (aka char)</code></td>
+						<td class="nameCol"><code>exists</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#HorseProperty" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000009</td>
+						<td class="typeCol"><code>bool (aka char)</code></td>
+						<td class="nameCol"><code>property</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0xA bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseLoc" role="tabpanel">
+				<p class="description-head">
+					Location of the horses <b>in town</b>.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Valid coordinates (depending of the town size).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseLocInSec" role="tabpanel">
+				<p class="description-head">
+					Location of the horses <b>in the current sector</b>.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Valid coordinates.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseSector" role="tabpanel">
+				<p class="description-head">
+					In which outdoor sector the horses are.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+					<h5>Value</h5>
+					Valid coordinates for the scenario outdoors.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseWhichTown" role="tabpanel">
+				<p class="description-head">
+					In which town the horses are currently in.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Valid town number : between <code>0</code> and <code>199</code> inclusive or <code>200</code> for outdoor.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseExists" role="tabpanel">
+				<p class="description-head">
+					Whether the horses appear in the current scenario.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean value (stored in a char).
+				</p>
+			  </div>
+			 
+			 <div class="tab-pane fade border border-secondary rounded ps-2" id="HorseProperty" role="tabpanel">
+				<p class="description-head">
+					Whether the horses belong to the party.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Boolean value (stored in a char).
+				</p>
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

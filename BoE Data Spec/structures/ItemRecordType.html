@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Item Record</h3>
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemVariety" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>variety</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemLevel" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000002</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>item_level</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemAwkward" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000004</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>awkward</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemBonus" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000005</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>bonus</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemProtection" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000006</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>protection</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemCharges" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000007</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>charges</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000008</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>type</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemMagicUseType" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000009</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>magic_use_type</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemGraphicNum" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000A</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>graphic_num</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemAbility" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000B</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>ability</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemAbilityStrength" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000C</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>ability_strength</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemTypeFlag" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000D</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>type_flag</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemIsSpecial" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000E</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>is_special</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemA" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00000F</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>a</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemValue" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000010</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>value</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemWeight" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000012</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>weight</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemSpecialClass" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000013</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>special_class</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemLocation" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000014</td>
+						<td class="typeCol"><code>Location</code></td>
+						<td class="nameCol"><code>item_loc</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemFullName" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000016</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>full_name[25]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemName" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00002F</td>
+						<td class="typeCol"><code>char</code></td>
+						<td class="nameCol"><code>name[15]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemTreasureClass" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00003E</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>treas_class</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemProperties" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00003F</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>item_properties</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemReserved" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000040</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>reserved1</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Monster-Data" data-bs-toggle="list" href="#ItemReserved" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000041</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>reserved2</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			</div>
+			Size : 0x42 bytes
+		  </div>
+		  
+		  <div class="col">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemVariety" role="tabpanel">
+				<p class="description-head">
+					What category the item is in-game.
+				</p>
+				<p> 
+					<h5>Value</h5>
+					<div class="col-4 position-static float-start small">
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Item Variety</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>No item</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>1-Handed weapon</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>2-Handed weapon</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Gold</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Bow</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">5</code></td>
+								<td>Arrows</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">6</code></td>
+								<td>Thrown missile</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">7</code></td>
+								<td>Potion/Magic Item</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">8</code></td>
+								<td>Scroll/Magic Item</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Wand</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">10</code></td>
+								<td>Tool</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">11</code></td>
+								<td>Food</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">12</code></td>
+								<td>Shield</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">13</code></td>
+								<td>Armor</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">14</code></td>
+								<td>Helm</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">15</code></td>
+								<td>Gloves</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					
+					<div class="col-4 position-static float-start">
+					<table class="table-bordered border-dark text-center small">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Item Variety</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">16</code></td>
+								<td>Shield (second time)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">17</code></td>
+								<td>Boots</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">18</code></td>
+								<td>Ring</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">19</code></td>
+								<td>Necklace</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">20</code></td>
+								<td>Weapon Poison</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">21</code></td>
+								<td>Non-Use Object</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">22</code></td>
+								<td>Pants</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">23</code></td>
+								<td>Crossbow</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">24</code></td>
+								<td>Bolts</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">25</code></td>
+								<td>Missile (no ammo)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">26</code></td>
+								<td>Unused</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">27</code></td>
+								<td>Unused</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemLevel" role="tabpanel">
+				<p class="description-head">
+					The level of item.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>50</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemAwkward" role="tabpanel">
+				<p class="description-head">
+					How awkward is item is.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>50</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemBonus" role="tabpanel">
+				<p class="description-head">
+					The bonus the item gives (e.g on damage rolls for weapon).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>60</code>, inclusive (contradict the 0-10 range of the scenario editor).
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemProtection" role="tabpanel">
+				<p class="description-head">
+					The protection level the item gives to its wearer.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>-10</code> and <code>20</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemCharges" role="tabpanel">
+				<p class="description-head">
+					How many charges the item have.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>100</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemTypeFlag" role="tabpanel">
+				<p class="description-head">
+					Integer describing the item broad type (e.g rocks all share <code>type_flag 15</code>). Used for item combining and engine sorting (e.g in case of too many items, rocks are deleted first).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>1000</code>, inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemType" role="tabpanel">
+				<p class="description-head">
+					If a weapon, the damage type of the weapon. Unused for other items.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Weapon type</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Edged</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Bashing</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Pole</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemMagicUseType" role="tabpanel">
+				<p class="description-head">
+					Either the item ability is harming/benificial to the pc/party.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Ability behavior</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Helps the using PC</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Harms the using PC</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>Helps the whole party</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Harms the whole party</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemGraphicNum" role="tabpanel">
+				<p class="description-head">
+					The identifier of the item graphic sprite.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Sheet source for the image</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0 =< x =< 45</code></td>
+								<td>Objects (big sized items sprites)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">46 =< x =< 123</code></td>
+								<td>Small Objects</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">x >= 150</code></td>
+								<td>Custom graphics</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemAbility" role="tabpanel">
+				<p class="description-head">
+					Any ability the item possess.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<ul>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#WeaponAbilities">Weapon Abilities</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#GeneralAbilities">General Abilities</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#NonSpellUsable">Non-spell Usable</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#SpellUsable">Spell Usable</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#Reagents">Reagents</a></li>
+						<li><a href="ItemsAbilities/ItemsAbilities.html#MissileAbilities">Missile Abilities</a></li>
+					</ul>
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemAbilityStrength" role="tabpanel">
+				<p class="description-head">
+					The strength the item's ability, if any.
+				</p>
+				<p>
+					<h5>Value</h5>
+					  Between <code>0</code> and <code>10</code>, inclusive, except for abilities <i>Summoning</i> and <i>Mass Summoning</i> which are between <code>0</code> and <code>255</code> (the number of the monster to summon), inclusive.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemIsSpecial" role="tabpanel">
+				<p class="description-head">
+					Game internal flag used for items to be treated as special (to investigate).
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>1</code> and <code>64</code>, inclusive. Is the number of the item on town (first ?) loading.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemA" role="tabpanel">
+				<p class="description-head">
+					Unused.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="ItemValue" role="tabpanel">
+				<p class="description-head">
+					The merchant value of the item.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>10 000</code>, inclusive.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="ItemWeight" role="tabpanel">
+				<p class="description-head">
+					How much the item weights.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>250</code>, inclusive.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="ItemSpecialClass" role="tabpanel">
+				<p class="description-head">
+					Any special class the item has.
+				</p>
+				<p>
+					<h5>Value</h5>
+					Between <code>0</code> and <code>100</code>, inclusive.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="ItemLocation" role="tabpanel">
+				<p class="description-head">
+					The location of the item.
+				</p>
+				<p>
+					<h5>Custom type used</h5>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+			  </div>
+			  
+			 <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemFullName" role="tabpanel">
+				<p class="description-head">
+					The item full name.
+				</p>
+				<p>
+					<h5>Value</h5>
+					25 char c-string array.
+				</p>
+			  </div>
+			  
+			<div class="tab-pane fade border border-secondary rounded ps-2" id="ItemName" role="tabpanel">
+				<p class="description-head">
+					The item usual name.
+				</p>
+				<p>
+					<h5>Value</h5>
+					15 char c-string array.
+				</p>
+			  </div>
+			  
+			  <div class="tab-pane fade ps-2" id="ItemTreasureClass" role="tabpanel">
+				<p class="description-head">
+					The treasure class of the item belongs to.
+				</p>
+				<p>
+					<h5>Value</h5>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>Value</code></th>
+							  <th scope="col" class="fs-5"><code>Description</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Junk, Not left</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1</code></td>
+								<td>Lousy, 1 - 20 gp</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">2</code></td>
+								<td>So-so, 20-200 gp</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">3</code></td>
+								<td>Good, 200+ gp</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">4</code></td>
+								<td>Great, 2500+ gp</td>
+							</tr>
+						</tbody>
+					</table>
+					</p>
+				  </div>
+					  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemProperties" role="tabpanel">
+					<p class="description-head">
+						Bitfield describing miscellaneous items properties.
+					</p>
+					<p>
+						<h5>Value</h5>
+						<table class="table-bordered border-dark text-center">
+							<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5"><code>Value</code></th>
+								  <th scope="col" class="fs-5"><code>Description</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code class="fs-5">1 << 0 (1)</code></td>
+									<td>Is identified ?</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 << 1 (2)</code></td>
+									<td>Is someone property ?</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 << 2 (4)</code></td>
+									<td>Is magic ?</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 << 3 (8)</code></td>
+									<td>Is contained ?</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 << 4 (16)</code></td>
+									<td>Is cursed ?</td>
+								</tr>
+								<tr>
+									<td><code class="fs-5">1 << 5 (32)</code></td>
+									<td>Conceal ability ?</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				  </div>
+				  
+				  <div class="tab-pane fade border border-secondary rounded ps-2" id="ItemReserved" role="tabpanel">
+					<p class="description-head">
+						Unused
+					</p>
+				  </div>
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/stickontop.js"></script>
+  </body>
+</html>

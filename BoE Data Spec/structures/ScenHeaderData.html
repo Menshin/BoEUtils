@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">Scenario Header Data</h3>
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Info-Header" data-bs-toggle="list" href="#ScenInfoHeader" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Scenario Info Header</code></td>
+						<td class="nameCol"><code>scenario</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Town-Infos" data-bs-toggle="list" href="#ScenTownInfos" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000011</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>town_size[200]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0000D9</td>
+							<td class="typeCol"><code>unsigned char</code></td>
+							<td class="nameCol"><code>town_hidden[200]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-a" data-bs-toggle="list" href="#Scena" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0001A1</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>a</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flaga" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0001A2</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_a</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Start-Init" data-bs-toggle="list" href="#ScenStartInit" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x0001A4</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>intro_mess_pic</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0001A6</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>intro_mess_len</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0001A8</td>
+							<td class="typeCol"><code>Location</code></td>
+							<td class="nameCol"><code>where_start</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0001AA</td>
+							<td class="typeCol"><code>Location</code></td>
+							<td class="nameCol"><code>out_sec_start</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0001AC</td>
+							<td class="typeCol"><code>Location</code></td>
+							<td class="nameCol"><code>out_start</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x0001AE</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>which_town_start</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagb" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0001B0</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_b</code></td>
+					</tbody>
+				</table>
+			  </button>		
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Town-Data" data-bs-toggle="list" href="#ScenTownData" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x0001B2</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>town_data_size[200][5]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000982</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>town_to_add_to[10]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000996</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>flag_to_add_to_town[10][2]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagc" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0009BE</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_c</code></td>
+					</tbody>
+				</table>
+			  </button>	
+
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Out-Data-Size" data-bs-toggle="list" href="#ScenOutDataSize" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x0009C0</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>out_data_size[100][2]</code></td>
+					</tbody>
+				</table>
+			  </button>	
+	
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Item-Storage-Data" data-bs-toggle="list" href="#ScenItemStorageData" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000B50</td>
+							<td class="typeCol"><code>RECT</code></td>
+							<td class="nameCol"><code>store_item_rects[3]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000B68</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>store_item_towns[3]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>	
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flage" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000B6E</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_e</code></td>
+					</tbody>
+				</table>
+			  </button>	
+			  
+			 <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Specials-Data" data-bs-toggle="list" href="#ScenSpecialsData" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000B70</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>special_items[50]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x000BD4</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>special_item_special[50]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			 
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Rating" data-bs-toggle="list" href="#ScenRating" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000C38</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>rating</code></td>
+					</tbody>
+				</table>
+			  </button>				 
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-UsesCustomGraphics" data-bs-toggle="list" href="#ScenUsesCustomGraphics" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000C3A</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>uses_custom_graphics</code></td>
+					</tbody>
+				</table>
+			  </button>	
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagf" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x000C3C</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_f</code></td>
+					</tbody>
+				</table>
+			  </button>	
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Record-Types-Data" data-bs-toggle="list" href="#ScenRecordTypes" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x000C3E</td>
+							<td class="typeCol"><code>Monster record</code></td>
+							<td class="nameCol"><code>scen_monsters[256]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00783E</td>
+							<td class="typeCol"><code>Boat record</code></td>
+							<td class="nameCol"><code>scen_boats[30]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00796A</td>
+							<td class="typeCol"><code>Horse record</code></td>
+							<td class="nameCol"><code>scen_horses[30]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagg" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x007A96</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_g</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			 <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Ter-Types" data-bs-toggle="list" href="#ScenTerTypes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x007A98</td>
+						<td class="typeCol"><code>Terrain type</code></td>
+						<td class="nameCol"><code>ter_types[256]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Timers-Data" data-bs-toggle="list" href="#ScenTimers" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x008A98</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>scenario_timer_times[20]</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x008AC0</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>scenario_timer_specs[20]</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagh" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x008AE8</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_h</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Special-Nodes-Data" data-bs-toggle="list" href="#ScenSpecialNodes" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x008AEA</td>
+						<td class="typeCol"><code>Special node</code></td>
+						<td class="nameCol"><code>scen_specials[256]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Storage-Shortcuts" data-bs-toggle="list" href="#ScenStorageShortcuts" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00A0EA</td>
+						<td class="typeCol"><code>Item storage shortcut</code></td>
+						<td class="nameCol"><code>storage_shortcuts[10]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagd" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00A2A2</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_d</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Str-Length" data-bs-toggle="list" href="#ScenStrLength" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00A2A4</td>
+						<td class="typeCol"><code>unsigned char</code></td>
+						<td class="nameCol"><code>scen_str_len[300]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Pass-Flagi" data-bs-toggle="list" href="#ScenPassFlags" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x00A3D0</td>
+						<td class="typeCol"><code>short</code></td>
+						<td class="nameCol"><code>flag_i</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Last-Edited-data" data-bs-toggle="list" href="#ScenLastEdited" role="tab">
+				 <table>
+					<tbody>
+						<tr>
+							<td class="typeOffset">0x00A3D2</td>
+							<td class="typeCol"><code>Location</code></td>
+							<td class="nameCol"><code>last_out_edited</code></td>
+						</tr>
+						<tr>
+							<td class="typeOffset">0x00A3D4</td>
+							<td class="typeCol"><code>short</code></td>
+							<td class="nameCol"><code>last_town_edited</code></td>
+						</tr>
+					</tbody>
+				</table>
+			  </button>
+			</div>
+			Size : 0xA3D6 bytes
+		  </div>
+		  
+<!-- Tab panel content -->	 
+ 
+		  <div class="col-8">
+			<h3 class="text-center">&nbsp</h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade border border-secondary rounded p-2 " id="ScenInfoHeader" role="tabpanel">
+				<p class="description-head">
+					Contains various informations and flags for the current scenario.
+				</p>
+				
+				<h4>Data</h4>
+				<div class="row">
+				  <div class="col-5">
+					<div class="list-group" id="list-tab" role="tablist">
+					  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Flags" data-bs-toggle="list" href="#Flags" role="tab">
+						 <table>
+							<tbody>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>flag1</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>flag2</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>flag3</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>flag4</code></td>
+								</tr>
+							</tbody>
+						</table>
+					  </button>
+					  
+					  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Version" data-bs-toggle="list" href="#ScenVersions" role="tab">
+						 <table>
+							<tbody>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>ver[3]</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>min_run_ver</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>prog_make_ver[3]</code></td>
+								</tr>
+							</tbody>
+						</table>
+					  </button>
+					  
+					  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-InitData" data-bs-toggle="list" href="#ScenInitData" role="tab">
+						 <table>
+							<tbody>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>num_towns</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>out_width</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>out_height</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>difficulty</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>intro_pic</code></td>
+								</tr>
+								<tr>
+									<td class="typeCol"><code>unsigned char</code></td>
+									<td class="nameCol"><code>default_ground</code></td>
+								</tr>
+							</tbody>
+						</table>
+					  </button>
+					</div>
+				  </div>
+					
+				<div class="col">
+					<div class="tab-content" id="nav-tabContent">
+					  <div class="tab-pane fade" id="Flags" role="tabpanel">
+							<h5>Description</h5>
+							<p class="description">
+								Scenario flags that specify on which platform the scenario has been made/saved.
+								Actually used to guess the endianness of the scenario file.
+							</p>
+							
+							<h5>Values</h5>
+							<p>
+
+							<table class="table table-sm table-bordered border-dark text-center">
+								<thead class="table-light border-dark">
+									<tr class ="align-middle">
+									  <th scope="col">Platform/Presumed endianness</th>
+									  <th scope="col"><code>flag1</code></th>
+									  <th scope="col"><code>flag2</code></th>
+									  <th scope="col"><code>flag3</code></th>
+									  <th scope="col"><code>flag4</code></th>
+									</tr>
+								</thead>
+								<tbody class="align-middle">
+									<tr>
+										<td>Mac (Big Endian)</td>
+										<td><code>0x0a (10)</code></td>
+										<td><code>0x14 (20)</code></td>
+										<td><code>0x1e (30)</code></td>
+										<td><code>0x28 (40)</code></td>
+									</tr>
+									<tr>
+										<td>Windows (Little Endian)</td>
+										<td><code>0x14 (20)</code></td>
+										<td><code>0x28 (40)</code></td>
+										<td><code>0x3C (60)</code></td>
+										<td><code>0x50 (80)</code></td>
+									</tr>
+								</tbody>
+							</table>
+							
+							If the game fails to find valid flags when reading a scenario header, it sets <code>flag1</code> to <code>0</code>.
+							</p>
+					  </div>
+					  
+					  <div class="tab-pane fade" id="ScenVersions" role="tabpanel">
+							<h5>Description</h5>
+							<p class="description">
+								Various bits storing the scenario version, the minimum version of BoE to properly run it and the version of the Scenario Editor used to make it. That would allow some version control, however none has really been coded in the original source.
+							</p>
+							
+							<h5>Values</h5>
+							<p>
+								<ul>
+									<li><code>ver[3]</code> : version of the scenario in a <code>x.y.z</code> format.</li>
+									<li><code>min_run_ver</code> : minimum version of the game to run the scenario. Set to <code>1</code> and never checked.</li>
+									<li><code>prog_make_ver[3]</code> : version of the Scenario Editor in a <code>x.y.z</code> format. Always set to <code>1.0.0</code>.<br>
+									The game prevent to load the scenario if <code>x >= 2</code>, which can never happen.</li>
+								</ul>
+							</p>
+					  </div>
+					  
+					  <div class="tab-pane fade" id="ScenInitData" role="tabpanel">
+							<h5>Description</h5>
+							<p class="description">
+								Initialization values for various scenario variables (some needed to properly parse the scenario file).
+								<ul>
+									<li><code>num_towns</code> : numbers of towns in the scenario.</li>
+									<li><code>out_width</code> : width of the outdoor map.</li>
+									<li><code>out_height</code> : height of the outdoor map.</li>
+									<li><code>difficulty</code> : the general difficulty of the scenario (used by the difficulty adjustment algorithm).</li>
+									<li><code>intro_pic</code> : the number of the picture appearing on the scenario selection dialog.</li>
+									<li><code>default_ground</code> : unused (used to store the scenario rating on Win ?!?).</li>
+								</ul>
+							</p>
+							
+							<h5>Values</h5>
+							<p>
+								<ul>
+									<li><code>num_towns</code> : between <code>1</code> and <code>200</code> inclusive.</li>
+									<li><code>out_width</code> : between <code>1</code> and <code>50</code> inclusive.</li>
+									<li><code>out_height</code> : between <code>1</code> and <code>50</code> inclusive.</li>
+									<li>Additional condition : <code>out_width * out_height <= 100</code><span></li>
+									<li><code>difficulty</code> : between <code>0</code> (Low Level) and <code>3</code> (Very High Level).</li>
+									<li><code>intro_pic</code> : between <code>0</code> and <code>29</code>.</li>
+									<li><code>default_ground</code> : set to <code>1</code> in Win code, unused on Mac.</li>
+								</ul>
+							</p>
+					  </div>
+					</div>
+				  </div>
+				
+			  </div>
+			</div>
+			
+			<div class="tab-pane fade border border-secondary rounded p-2" id="ScenTownInfos" role="tabpanel">
+				<p class="description-head">
+					Contains informations of the size and visibility of the scenario towns.
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					Initialization values for various scenario variables (some needed to properly parse the scenario file).
+					<ul>
+						<li><code>town_size[200]</code> : size of each town in the scenario (even for unused towns).</li>
+						<li><code>town_hidden[200]</code> : visibility of each town in the scenario (even for unused towns).</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>town_size[200]</code> :
+							<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col">Large town (64×64)</th>
+									  <th scope="col">Medium town(48×48)</th>
+									  <th scope="col">Small town(32×32)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>0</code></td>
+										<td><code>1</code></td>
+										<td><code>2</code></td>
+									</tr>
+								</tbody>
+							</table></li>
+
+						<li><code>town_hidden[200]</code> : Town visible is <code>0</code>, town hidden is <code>1</code>.</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="Scena" role="tabpanel">
+				<p class="description-head">
+					Seems totally unused and never set (<code>0</code>) ???
+				</p>
+		  </div>
+		  
+		  	<div class="tab-pane fade border border-secondary rounded p-2" id="ScenPassFlags" role="tabpanel">
+				<p class="description-head">
+					Flags used when checking the password of a scenario.
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><var>flag_a</var> : <code>sizeof(scenario_data_type) + rand(-1000,1000)</code> (unused in password calculation)</li>
+						<li><var>flag_b</var> : <code>town_s(password)</code></li>
+						<li><var>flag_c</var> : <code>out_s(password)</code></li>
+						<li><var>flag_d</var> : <code>init_data(password)</code></li>
+						<li><var>flag_e</var> : <code>str_size_1(password)</code></li>
+						<li><var>flag_f</var> : <code>str_size_2(password)</code></li>
+						<li><var>flag_g</var> : <code>10 000 + rand(0,5000) </code> (unused in password calculation)</li>
+						<li><var>flag_h</var> : <code>str_size_3(password)</code></li>
+						<li><var>flag_i</var> : Never set (unused in password calculation)</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenStartInit" role="tabpanel">
+				<p class="description-head">
+					Contains informations used in the initialization of the scenario.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<ul>
+						<li><code>intro_mess_pic</code> : Not used (remnant of older games ?)</li>
+						<li><code>intro_mess_len</code> : Not used (remnant of older games ?)</li>
+						<li><code>where_start</code> : <code>(x,y)</code> Coordinates of the party start position in the initial town.</li>
+						<li><code>out_sec_start</code> : <code>(x,y)</code>  coordinates of the outdoor section in which the party starts.</li>
+						<li><code>out_start</code> : <code>(x,y)</code> Coordinates of the party start position in the initial outdoor section.</li>
+						<li><code>which_town_start</code> : number of the town the party start in.</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>intro_mess_pic</code> : <code>0</code></li>
+						<li><code>intro_mess_len</code> : <code>0</code></li>
+						<li><code>where_start</code> : each coordinate between <code>0</code> and <code>scenario.town_size[which_town_start]</code>, inclusive.</li>
+						<li><code>out_sec_start</code> : each coordinate between <code>0</code> and <code>scenario.out_height/out_width</code>, inclusive.</li>
+						<li><code>out_start</code> : each coordinate between <code>0</code> and <code>48</code>, inclusive.</li>
+						<li><code>which_town_start</code> : between <code>0</code> and <code>scenario.num_towns - 1</code>.</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenTownData" role="tabpanel">
+				<p class="description-head">
+					Contains informations used in the initialization of the scenario.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="Location.html">Location</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<ul>
+						<li><code>town_data_size[200][5]</code> : contains sizes of various town related data (town record, town terrain data, town strings data, talking strings data) </li>
+						<li><code>town_to_add_to[10]</code> : the id (<code>town_number</code>) of up to 10 towns that checks for Party Stuff Done on entering and updates accordingly (aka Variable Town Entry).</li>
+						<li><code>flag_to_add_to_town[10][2]</code> : the Party Stuff Done value to add (i.e add <code>PSD[a][b]</code> to town number).</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>town_data_size[200][5]</code> :
+							<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col">town_data_size[X][0]</th>
+									  <th scope="col">town_data_size[X][1]</th>
+									  <th scope="col">town_data_size[X][2]</th>
+									  <th scope="col">town_data_size[X][3]</th>
+									  <th scope="col">town_data_size[X][4]</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>size of <code>town_record_type</code> + size of <code>big/ave/tiny_tr_type</code> (depending on the town size)</td>
+										<td>size of the 60 first town strings</td>
+										<td>size of town strings between <code>60</code> and <code>159</code></td>
+										<td>size of <code>talking_record_type</code> + size of the first 80 talk strings</td>
+										<td>size of talk strings between <code>80</code> and <code>169</code></td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+						<li><code>town_to_add_to[10]</code> : valid <code>town_number</code> (between <code>0</code> and <code>scenario.num_towns-1</code>).</li>
+						<li><code>flag_to_add_to_town[10][2]</code> : valid PSD flags :
+							<ul>
+							<li><code>flag_to_add_to_town[X][0]</code> : between <code>0</code> and <code>299</code></li>
+							<li><code>flag_to_add_to_town[X][1]</code> : between <code>0</code> and <code>9</code></li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenOutDataSize" role="tabpanel">
+				<p class="description-head">
+					Size of outdoors related data.
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>out_data_size[][0]</code> : size of <code>outdoor_record_type</code>.</li>
+						<li><code>out_data_size[][1]</code> : size of the 120 outdoors strings (<code>out_strs[]</code>).</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenItemStorageData" role="tabpanel">
+				<p class="description-head">
+					Scenario town storage data.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="RECT.html">RECT</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<ul>
+						<li><code>store_item_rects[3]</code> : RECT in which items are saved upon leaving town.</li>
+						<li><code>store_item_towns[3]</code> : up to 3 town ids (<code>town_number</code>) in which the item are saved on a given RECT.</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>store_item_rects[3]</code> : Any valid RECT (check against town boundaries, depending on town size).</li>
+						<li><code>store_item_towns[3]</code> : valid <code>town_number</code> (between <code>0</code> and <code>scenario.num_towns)</code>.</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		    <div class="tab-pane fade border border-secondary rounded p-2" id="ScenSpecialsData" role="tabpanel">
+				<p class="description-head">
+					Scenario specials data.
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<ul>
+						<li><code>special_items[50]</code> : described one of each of the 50 possible specials items.</li>
+						<li><code>special_item_special[50]</code> : Which special to call when using a special item (if usable).</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<ul>
+						<li><code>special_items[50]</code> :
+							<table class="table-bordered border-dark text-center">
+								<thead class="table-head small">
+									<tr>
+									  <th scope="col">Value</th>
+									  <th scope="col" class="fs-5"><code>0</code></th>
+									  <th scope="col" class="fs-5"><code>1</code></th>
+									  <th scope="col" class="fs-5"><code>10</code></th>
+									  <th scope="col" class="fs-5"><code>11</code></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="table-head small fw-bold">Meaning</td>
+										<td>Non-usable item, party doesn't start with it.</td>
+										<td>Usable item, party doesn't start with it.</td>
+										<td>Non-usable item, party start with it.</td>
+										<td>Usable item, party start with it.</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+						<li><code>special_item_special[50]</code> : any valid special id (between <code>0</code> and <code>255</code> or <code>-1</code> for none)</code>.</li>
+					</ul>
+				</p>
+		  </div>
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenRating" role="tabpanel">
+				<p class="description-head">
+					The scenario "PG"-rating.
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5"><code>rating</code></th>
+							  <th scope="col" class="fs-5"><code>0</code></th>
+							  <th scope="col" class="fs-5"><code>1</code></th>
+							  <th scope="col" class="fs-5"><code>2</code></th>
+							  <th scope="col" class="fs-5"><code>3</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="table-head small fw-bold">Meaning</td>
+								<td>G</td>
+								<td>PG</td>
+								<td>R</td>
+								<td>NC-17</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+		  </div>
+		   
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenUsesCustomGraphics" role="tabpanel">
+				<p class="description-head">
+					Probably intented to specify if custom graphics had to be loaded. Actually never used.
+				</p>
+				
+				<h5>Values</h5>
+				<p>
+					<code>uses_custom_graphics</code> : <code>0</code> (unused).
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenRecordTypes" role="tabpanel">
+				<p class="description-head">
+					Various record type holding data for monsters, boats and horses.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="MonsterRecordType.html">Monster record type</a>
+					<a class="nav-link" href="BoatRecordType.html">Boat record type</a>
+					<a class="nav-link" href="HorseRecordType.html">Horse record type</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<ul>
+						<li><code>scen_monsters[256]</code> : contains the data of the 256 defined monsters templates for the current scenario.</li>
+						<li><code>scen_boats[30]</code> : contains the data of up to 30 boats (position, ownership, etc).</li>
+						<li><code>scen_horses[30]</code> : contains the data of up to 30 horses (position, ownership, etc).</li>
+					</ul>
+				</p>
+		  </div>
+		   
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenTerTypes" role="tabpanel">
+				<p class="description-head">
+					Data for the scenario terrains types.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="TerrainType.html">Terrain type</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					<code>ter_types[256]</code> : contains the data of up to 256 defined terrains types for the current scenario.
+				</p>
+		  </div>
+		   
+		   <div class="tab-pane fade border border-secondary rounded p-2" id="ScenTimers" role="tabpanel">
+				<p class="description-head">
+					Scenario specials timers related data.
+				</p>
+				
+				<h5>Description</h5>
+				<p>
+					<ul>
+						<li><code>scenario_timer_times[20]</code> : any game time multiple of 10.</li>
+						<li><code>scenario_timer_specs[20]</code> : which scenario special to fire up.</li>
+					</ul>
+				</p>
+				
+				<h5>Values</h5>
+				<p class="description">
+					<ul>
+						<li><code>scenario_timer_times[20]</code> : the game time at which a scenario special is to fire up.</li>
+						<li><code>scenario_timer_specs[20]</code> : Any integer between <code>-1</code> (no special) and <code>255</code>.</li>
+					</ul>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenSpecialNodes" role="tabpanel">
+				<p class="description-head">
+					Various record type holding data for monsters, boats and horses.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="SpecialNodeType.html">Special Node type</a>
+				</p>
+				
+				<h5>Description</h5>
+				<p class="description">
+					Contains the scenario specials data.
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenStorageShortcuts" role="tabpanel">
+				<p class="description-head">
+					Data used in the Item Storage Shortcut feature of the Scenario Editor.
+				</p>
+				
+				<h5>Custom type used</h5>
+				<p>
+					<a class="nav-link" href="ItemStorageShortcut.html">Item Storage Shorcut</a>
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenStrLength" role="tabpanel">
+				<p class="description-head">
+					The length of all scenario strings (used to compute offset).
+				</p>
+		  </div>
+		  
+		  <div class="tab-pane fade border border-secondary rounded p-2" id="ScenLastEdited" role="tabpanel">
+				<p class="description-head">
+					Data used by the Scenario Editor to save the last edited town and outdoor section.
+				</p>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script> 
+	<script src="../js/stickontop.js"></script> 
+</script> 
+  </body>
+</html>

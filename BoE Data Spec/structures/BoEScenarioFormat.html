@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoE Data Specs</title>
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown">Navigation</a>
+	  <ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="../index.html">Index</a></li>
+	  </ul>
+	</nav>
+
+	<main class="container">
+	  
+		<div class="row pb-2">
+		  <div class="col-4">
+		  <h3 class="text-center">BoE Scenario Format</h3>
+			<div class="list-group border border-dark" id="list-tab" role="tablist">
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Scen-Data" data-bs-toggle="list" href="#ScenHeaderData" role="tab">
+				 <table>
+					<tbody>
+					    <td class="typeOffset">0x000000</td>
+						<td class="typeCol"><code>Scenario Header Data</code></td>
+						<td class="nameCol"><code>scenario</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Items-Data" data-bs-toggle="list" href="#ScenItemsData" role="tab">
+				 <table>
+					<tbody>
+					    <td class="typeOffset">0x00A3D6</td>
+						<td class="typeCol"><code>Scenario Item Data</code></td>
+						<td class="nameCol"><code>scen_item_list</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Strings-Data" data-bs-toggle="list" href="#ScenStringsData" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">0x013CF6</td>
+						<td class="typeCol"><code>C-strings Array</code></td>
+						<td class="nameCol"><code>strings</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Outdoors-Data" data-bs-toggle="list" href="#ScenOutdoorsData" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">Variable</td>
+						<td class="typeCol"><code>Outdoors data</code></td>
+						<td class="nameCol"><code>outdoors[]</code></td>
+					</tbody>
+				</table>
+			  </button>
+			  
+			  <button type="button" class="list-group-item list-group-item-action list-group-item-field" id="BoE-Towns-Data" data-bs-toggle="list" href="#ScenTownsData" role="tab">
+				 <table>
+					<tbody>
+						<td class="typeOffset">Variable</td>
+						<td class="typeCol"><code>Towns data</code></td>
+						<td class="nameCol"><code>towns[]</code></td>
+					</tbody>
+				</table>
+			  </button>
+
+			</div>
+		  </div>
+		  <div class="col-5">
+			<h3 class="text-center">&nbsp </h3>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade tab-pane fade border border-secondary rounded ps-2" id="ScenHeaderData" role="tabpanel">
+				<p class="description-head">
+					Contains informations needed to properly load the scenario.
+				</p>
+				<p>
+					<h5>Type</h5>
+					<a class="nav-link" href="ScenHeaderData.html">Scenario Header Data</a>
+				</p>
+			  </div>
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ScenItemsData" role="tabpanel">
+				<p class="description-head">
+					Contains templates for the scenario items and monsters and terrains names.
+				</p>
+				<p>
+					<h5>Type</h5>
+					<a class="nav-link" href="ScenItemsData.html">Scenario Item Data</a>
+				</p>
+			  </div>
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ScenStringsData" role="tabpanel">
+			    <p class="description-head">
+					Contains all the scenario strings : 270 c-strings each with length saved in the scenario header <code>scenario.scen_str_len[i]</code>.
+			    </p>
+			  </div>
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ScenOutdoorsData" role="tabpanel">
+				<p class="description-head">
+					Contains the outdoors chunks data.
+				</p>
+				<p>
+					<h5>Type</h5>
+					Array of <a class="nav-link" href="OutdoorChunkDataFormat.html">Outdoor Chunk Data Format</a>
+				</p></div>
+			  <div class="tab-pane fade border border-secondary rounded ps-2" id="ScenTownsData" role="tabpanel">
+				<p class="description-head">
+					Contains the data for all the scenario towns.
+				</p>
+				<p>
+					<h5>Type</h5>
+					Array of <a class="nav-link" href="TownDataFormat.html">Town Data Format</a>
+				</p></div>
+			</div>
+		  </div>
+		</div>
+	
+	</main>
+    <script src="../js/bootstrap.bundle.min.js"></script> 
+  </body>
+</html>
