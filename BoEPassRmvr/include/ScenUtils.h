@@ -7,7 +7,6 @@
 #ifndef SCEN_UTILS_H
 #define SCEN_UTILS_H
 
-#include <stdio.h>
 #include <stdint.h>
 #include "BitUtils.h"
 
