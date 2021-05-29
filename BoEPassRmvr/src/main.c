@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "include/BitUtils.h"
-#include "include/ScenUtils.h"
+#include "BitUtils.h"
+#include "ScenUtils.h"
 
 FILE* scenFile;
 int EndianessNeedFlipping;
@@ -27,13 +27,13 @@ int main(int argc, char* argv[])
 
     scenFile = fopen(argv[1], "rb+");
     if(scenFile == NULL){
-        printf("Error: can't open file: %s",  argv[1]);
+        printf("Error: can't open file: %s\n",  argv[1]);
         fclose(scenFile);
         return 1;
     }
 
     if(!CheckScenarioHeader()){
-        printf("Error: invalid scenario file");
+        printf("Error: invalid scenario file\n");
         fclose(scenFile);
         return 2;
     }
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
         fwrite(&NewFlags[i],2,1,scenFile);
     }
 
-    printf("Success: password removed");
+    printf("Password succesfully removed\n");
     fclose(scenFile);
 
     return 0;
