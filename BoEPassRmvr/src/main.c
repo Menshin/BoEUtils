@@ -25,10 +25,14 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    scenFile = fopen(argv[1], "rb+");
+    #ifdef WIN32
+        fopen_s(&scenFile,argv[1], "rb+");
+    #else
+        scenFile = fopen(argv[1], "rb+");
+    #endif
+
     if(scenFile == NULL){
         printf("Error: can't open file: %s\n",  argv[1]);
-        fclose(scenFile);
         return 1;
     }
 
