@@ -48,7 +48,7 @@ int HandleArguments(int argc, char* argv[], Arguments* args){
 
 void PrintUsage(){
     std::cout << "Usage: " << std::endl;
-    std::cout << "\t BoEMapExtract -a|o|t|d|b|m filename.exs" << std::endl;
+    std::cout << "\t BoEMapsExtract -a|o|t|d|b|m filename.exs" << std::endl;
     std::cout << "Assets:" << std::endl;
     std::cout << "\t BoE base image files should be located in a ./ressources folder" << std::endl;
     std::cout << "Argument:" << std::endl;
