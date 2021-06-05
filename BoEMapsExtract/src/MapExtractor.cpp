@@ -288,7 +288,7 @@ bool MapExtractor::LoadBaseGraphics(){
     }
     PrintGreen("done", true);
 
-    std::cout << "\t loading " << baseGraphicsFile << "... ";
+    std::cout << "\t loading " << baseAnimGraphicsFile << "... ";
     animTerrainSurface = IMG_Load(baseAnimGraphicsFile.c_str());
     if(animTerrainSurface == NULL){
         PrintRed("not found", true);
