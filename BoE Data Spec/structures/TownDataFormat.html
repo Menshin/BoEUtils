@@ -125,6 +125,36 @@
 			  <div class="tab-pane fade border border-secondary rounded ps-2" id="TownFormatStrings" role="tabpanel">
 				<p class="description-head">
 					Variable array of c-strings containing all the outdoor chunk strings (lengths are set in <code>town.strlens[]</code>).
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+								<tr>
+								  <th scope="col" class="fs-5">String index</th>
+								  <th scope="col" class="fs-5">Usage</th>
+								</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Town name</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1->16</code></td>
+								<td>Town areas descriptions</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">17->19</code></td>
+								<td>Comments</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">20->119</code></td>
+								<td>Town text (specials, etc)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">120->139</code></td>
+								<td>Town signs</td>
+							</tr>
+						</tbody>
+					</table>
 				</p>
 			  </div>
 			  

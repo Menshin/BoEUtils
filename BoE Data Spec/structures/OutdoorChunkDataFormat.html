@@ -65,6 +65,37 @@
 				<p class="description-head">
 					Variable array of c-strings containing all the outdoor chunk strings (lengths are set in <code>outdoor.strlens[]</code>).<br>
 					Ended by the string "<b>From here on, reserved for future use</b>"
+					<table class="table-bordered border-dark text-center">
+						<thead class="table-head small">
+							<tr>
+							  <th scope="col" class="fs-5">String index</th>
+							  <th scope="col" class="fs-5">Usage</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td><code class="fs-5">0</code></td>
+								<td>Area name</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">1->8</code></td>
+								<td>Outdoor areas descriptions</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">9</code></td>
+								<td>Comments</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">10->99</code></td>
+								<td>Outdoor text (specials, etc)</td>
+							</tr>
+							<tr>
+								<td><code class="fs-5">100->107</code></td>
+								<td>Outdoor signs</td>
+							</tr>
+						</tbody>
+					</table>					
 				</p>
 			  </div>
 			  
