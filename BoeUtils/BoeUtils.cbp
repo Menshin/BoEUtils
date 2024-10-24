@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BoeUtils" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_102_64_bits" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/BoeUtils" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/BoeUtils" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_102_64_bits" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c17" />
+			<Add option="-fexceptions" />
+			<Add directory="C:/Code/BoEUtils/BoeUtils/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="C:/Code/BoEUtils/BoeUtils/include" />
+		</Linker>
+		<Unit filename="include/BitUtils.hpp" />
+		<Unit filename="include/Items.hpp" />
+		<Unit filename="include/Misc.hpp" />
+		<Unit filename="include/Monsters.hpp" />
+		<Unit filename="include/Outdoors.hpp" />
+		<Unit filename="include/ScenReader.hpp" />
+		<Unit filename="include/ScenWriter.hpp" />
+		<Unit filename="include/Scenario.hpp" />
+		<Unit filename="include/Talking.hpp" />
+		<Unit filename="include/Terrains.hpp" />
+		<Unit filename="include/Towns.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/BitUtils.cpp" />
+		<Unit filename="src/Items.cpp" />
+		<Unit filename="src/Misc.cpp" />
+		<Unit filename="src/Monsters.cpp" />
+		<Unit filename="src/Outdoors.cpp" />
+		<Unit filename="src/ScenReader.cpp" />
+		<Unit filename="src/ScenWriter.cpp" />
+		<Unit filename="src/Scenario.cpp" />
+		<Unit filename="src/Talking.cpp" />
+		<Unit filename="src/Terrains.cpp" />
+		<Unit filename="src/Towns.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
