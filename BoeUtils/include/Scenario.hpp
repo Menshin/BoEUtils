@@ -127,10 +127,15 @@ namespace BoE{
 
             void SaveScenario(std::string filename);
 
+            void loadtown(uint16_t townNumber);
+
             void OutputGeneralInfo();
         private:
             ScenarioStatus status;
             ScenData data;
+
+            TownData loadedTown;
+            OutdoorChunk loadedOutdoorChunk;
     };
 
 }

@@ -55,6 +55,8 @@ namespace BoE{
             void FlipOutdoorChunkEndianness(OutdoorChunk &outdoorChunk);
             void FlipItemRecord(ItemRecord &record);
             void FlipMonsterRecord(MonsterRecord &record);
+            void FlipRect(Rect16 &rect);//has to account for the Windows/Mac differences for the Rect structure
+            void FlipWinMacFlags();
     };
 }
 

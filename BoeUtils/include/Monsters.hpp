@@ -5,7 +5,7 @@
 #include "Misc.hpp"
 namespace BoE{
     struct MonsterRecord{
-        uint8_t monsterNumber, level, monsterName[26];
+        uint8_t monsterNumber, level, monsterName[26]; //monsterName is zeroed in the scenario file and fetched from the scenario monster name list
         int16_t health, maxHealth, magicPoints, maxMagicPoints;
 
         uint8_t armor, skill;
@@ -17,7 +17,8 @@ namespace BoE{
         int16_t status[15];
 
         uint8_t direction, immunities, xWidth, yWidth, radiate1, radiate2, defaultAttitude, summonType;
-        uint8_t defaultFacialPic, reserved[3], pictureNumber;
+        uint8_t defaultFacialPic, reserved[3];
+        int16_t pictureNumber;
     };
 
     struct CreatureStart{

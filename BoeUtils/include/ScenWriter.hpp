@@ -23,7 +23,6 @@ namespace BoE{
                 std::string GetErrorMessage() const;
                 void WriteScenario(std::string filename);
 
-
             private:
                 std::ofstream scenFile;
                 const ScenData &data;

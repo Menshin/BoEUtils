@@ -5,7 +5,7 @@ using namespace BoE;
 
 void BoE::OutputMonsterInfo(MonsterRecord &record){
 
-    std::cout << "Number: " << static_cast<int>(record.monsterNumber) << " Level: " << static_cast<int>(record.level) << " Name: " << static_cast<char>(record.monsterName[0]) << std::endl;
+    std::cout << "Number: " << static_cast<int>(record.monsterNumber) << " Level: " << static_cast<int>(record.level) << " Name: " << record.monsterName << std::endl;
     std::cout << "Health: " << static_cast<int>(record.health) << " Max Health: " << static_cast<int>(record.maxHealth) \
               << " MP: " << static_cast<int>(record.magicPoints) << " Max MP: " << static_cast<int>(record.maxMagicPoints) << std::endl;
 

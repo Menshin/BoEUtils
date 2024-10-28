@@ -3,7 +3,7 @@
 namespace BoE{
 
     void Flip16BytesValue(int16_t &i){
-        i = (i&0xFF00) >> 8 | (i&0x00FF) << 8;
+        i = ((i&0xFF00) >> 8) | ((i&0x00FF) << 8);
     }
 
     void Flip32BytesValue(int32_t &i){

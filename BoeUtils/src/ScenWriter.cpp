@@ -2,6 +2,10 @@
 
 using namespace BoE;
 
+/*
+ * Main
+ */
+
 DataWriter::DataWriter(std::string filename, const ScenData &_data): data{_data}{
     //check if we should overwrite an existing file
     if(std::filesystem::exists(filename)){
@@ -36,6 +40,27 @@ std::string BoE::DataWriter::GetErrorMessage() const{
             return std::string{"DATA WRITER: Unspecified error."};
     }
 }
+
+void BoE::DataWriter::WriteScenario(std::string filename){
+    scenFile.open(filename,std::ofstream::binary | std::ofstream::out);
+
+    if(!scenFile){
+        status = WriterStatus::CantOpenFile;
+        return;
+    }
+
+    status = WriterStatus::Ok;
+
+    WriteScenHeader();
+    WriteScenItemsData();
+    WriteScenStrings();
+    WriteScenOutdoors();
+    WriteScenTowns();
+}
+
+/*
+ * Scenario data parts writing helpers
+ */
 
 void BoE::DataWriter::WriteScenHeader(){
     //scenario header data
@@ -155,22 +180,4 @@ void BoE::DataWriter::WriteScenTowns(){
             }
         }
     }
-}
-
-
-void BoE::DataWriter::WriteScenario(std::string filename){
-    scenFile.open(filename,std::ofstream::binary | std::ofstream::out);
-
-    if(!scenFile){
-        status = WriterStatus::CantOpenFile;
-        return;
-    }
-
-    status = WriterStatus::Ok;
-
-    WriteScenHeader();
-    WriteScenItemsData();
-    WriteScenStrings();
-    WriteScenOutdoors();
-    WriteScenTowns();
 }

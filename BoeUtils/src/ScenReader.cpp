@@ -58,6 +58,11 @@ std::string BoE::DataReader::GetErrorMessage() const{
 void BoE::DataReader::ReadHeader(){
     scenFile.seekg(0,std::fstream::beg);
     scenFile.read(reinterpret_cast<char*>(&data.header),sizeof(ScenHeader));
+
+    //Update the validation flags since we're flipping endianness
+    if(differentEndianness){
+        FlipWinMacFlags();
+    }
 }
 
 void BoE::DataReader::ReadGeneralData(){
@@ -80,12 +85,18 @@ void BoE::DataReader::ReadGeneralData(){
 
     Read16bits(scenFile, reinterpret_cast<char*>(&data.general.outdoorsDataSize), 100*2, differentEndianness);
 
-    Read16bits(scenFile, reinterpret_cast<char*>(&data.general.storeItemRects), 3*4, differentEndianness);
+    //Can't just flip Rect attributes if conversion is needed, since the structure is different between Mac and Windows
+    scenFile.read(reinterpret_cast<char*>(&data.general.storeItemRects),3*sizeof(Rect16));
+    if(differentEndianness){
+        for(int i = 0 ; i < 4 ; i++){
+            FlipRect(data.general.storeItemRects[i]);
+        }
+    }
     Read16bits(scenFile, reinterpret_cast<char*>(&data.general.storeItemsTowns), 3, differentEndianness);
 
     Read16bits(scenFile, reinterpret_cast<char*>(&data.general.flags[4]), 1, differentEndianness); //flag_e (flag_d is at the bottom of the data)
 
-    Read16bits(scenFile, reinterpret_cast<char*>(&data.general.specialItems), 2*50, differentEndianness); //specialItems + specialItemsSpecial
+    Read16bits(scenFile, reinterpret_cast<char*>(&data.general.specialItems), 50*2, differentEndianness); //specialItems + specialItemsSpecial
 
     Read16bits(scenFile, reinterpret_cast<char*>(&data.general.rating), 2*1, differentEndianness); //rating + usesCustomGraphics
 
@@ -168,7 +179,6 @@ void BoE::DataReader::ReadScenItemsData(){
     }
     scenFile.read(reinterpret_cast<char*>(&data.monstersNames[0]),256*20);
     scenFile.read(reinterpret_cast<char*>(&data.terrainsNames[0]),256*30);
-
 }
 
 void BoE::DataReader::ReadScenStrings(){
@@ -277,10 +287,7 @@ void BoE::DataReader::LoadScenario(std::string filename){
 
 void BoE::DataReader::FlipTownTerrainEndianness(TownTerrain &townTerrain, int terrainType){
     for (int i = 0 ; i < 16 ; i++){
-        Flip16BytesValue(townTerrain.roomRects[i].bottom);
-        Flip16BytesValue(townTerrain.roomRects[i].left);
-        Flip16BytesValue(townTerrain.roomRects[i].right);
-        Flip16BytesValue(townTerrain.roomRects[i].top);
+        FlipRect(townTerrain.roomRects[i]);
     }
 
     for(int i = 0 ; i < townDataSizesFromType[terrainType][1] ; i++){
@@ -303,10 +310,7 @@ void BoE::DataReader::FlipTownDataEndianness(TownData &townData){
         Flip16BytesValue(townData.town.exitSpecs[i]);
     }
 
-    Flip16BytesValue(townData.town.inTownRect.bottom);
-    Flip16BytesValue(townData.town.inTownRect.left);
-    Flip16BytesValue(townData.town.inTownRect.right);
-    Flip16BytesValue(townData.town.inTownRect.top);
+    FlipRect(townData.town.inTownRect);
 
     for (int i = 0 ; i < 64 ; i++){
        Flip16BytesValue(townData.town.presetItems[i].itemCode);
@@ -371,10 +375,7 @@ void BoE::DataReader::FlipOutdoorChunkEndianness(OutdoorChunk &outdoorChunk){
     }
 
      for (int i = 0 ; i < 8 ; i++){
-        Flip16BytesValue(outdoorChunk.outdoor.infoRect[i].bottom);
-        Flip16BytesValue(outdoorChunk.outdoor.infoRect[i].left);
-        Flip16BytesValue(outdoorChunk.outdoor.infoRect[i].right);
-        Flip16BytesValue(outdoorChunk.outdoor.infoRect[i].top);
+        FlipRect(outdoorChunk.outdoor.infoRect[i]);
     }
 
      for (int i = 0 ; i < 60 ; i++){
@@ -411,4 +412,27 @@ void BoE::DataReader::FlipMonsterRecord(MonsterRecord &record){
     Flip16BytesValue(record.lootChance);
     for(int i = 0 ; i < 15 ; ++i)
         Flip16BytesValue(record.status[i]);
+    Flip16BytesValue(record.pictureNumber);
+}
+
+void BoE::DataReader::FlipRect(Rect16 &rect){
+    Flip16BytesValue(rect.bottom);
+    Flip16BytesValue(rect.left);
+    Flip16BytesValue(rect.right);
+    Flip16BytesValue(rect.top);
+
+    short tmp = rect.bottom;
+    rect.bottom = rect.right;
+    rect.right = tmp;
+
+    tmp = rect.top;
+    rect.top = rect.left;
+    rect.left = tmp;
+}
+
+void BoE::DataReader::FlipWinMacFlags(){
+    data.header.validationFlags[0] = 0x14;
+    data.header.validationFlags[1] = 0x28;
+    data.header.validationFlags[2] = 0x3c;
+    data.header.validationFlags[3] = 0x50;
 }
